@@ -1,0 +1,93 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss grouping content
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("grouping content", "figure") or
+  	normalize-get("grouping content", "hr") or
+  	normalize-get("grouping content", "pre") or
+  	normalize-get("grouping content", "code kbd pre samp") {
+
+	/* Grouping content
+	   ========================================================================== */
+
+
+// normalize.scss grouping content figure
+//////////////////////////////////////////////////////////////
+
+	@if normalize-get("grouping content", "figure") {
+
+		@if normalize-get("options", "explanations comments") {
+			/**
+			* Address margin not present in IE 8/9 and Safari.
+			*/
+		}
+
+		figure {
+			margin: 1em 40px;
+		}
+
+	}
+
+
+// normalize.scss grouping content hr
+//////////////////////////////////////////////////////////////
+
+    @if normalize-get("grouping content", "hr") {
+
+		@if normalize-get("options", "explanations comments") {
+			/**
+			* Address differences between Firefox and other browsers.
+			*/
+		}
+
+		hr {
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+			height: 0;
+		}
+
+    }
+
+
+// normalize.scss grouping content pre
+//////////////////////////////////////////////////////////////
+
+    @if normalize-get("grouping content", "pre") {
+
+		@if normalize-get("options", "explanations comments") {
+			/**
+			* Contain overflow in all browsers.
+			*/
+		}
+
+		pre {
+			overflow: auto;
+		}
+
+    }
+
+
+// normalize.scss grouping content code kbd pre samp
+//////////////////////////////////////////////////////////////
+
+    @if normalize-get("grouping content", "code kbd pre samp") {
+
+		@if normalize-get("options", "explanations comments") {
+			/**
+			* Address odd `em`-unit font size rendering in all browsers.
+			*/
+		}
+
+		code,
+		kbd,
+		pre,
+		samp {
+			font-family: monospace, monospace;
+			font-size: 1em;
+		}
+
+    }
+
+}

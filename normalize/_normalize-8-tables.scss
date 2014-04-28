@@ -1,0 +1,45 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss tables
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("tables", "table") or
+	normalize-get("tables", "td th") {
+
+	/* Tables
+	   ========================================================================== */
+
+
+// normalize.scss tables table
+//////////////////////////////////////////////////////////////
+
+	@if normalize-get("tables", "table") {
+
+		@if normalize-get("options", "explanations comments") {
+			/**
+			* Remove most spacing between table cells.
+			*/
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+	}
+
+
+// normalize.scss tables td th
+//////////////////////////////////////////////////////////////
+
+    @if normalize-get("tables", "td th") {
+
+		td,
+		th {
+			padding: 0;
+		}
+
+    }
+
+}

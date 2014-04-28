@@ -1,0 +1,50 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss links
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("links", "background") or
+	normalize-get("links", "outline") {
+
+	/* Links
+	   ========================================================================== */
+
+
+// normalize.scss links background
+//////////////////////////////////////////////////////////////
+
+	@if normalize-get("links", "background") {
+
+		@if normalize-get("options", "explanations comments") { 
+			/**
+			* Remove the gray background color from active links in IE 10.
+			*/
+		}
+
+		a {
+			background: transparent;
+		}
+
+	}
+
+
+// normalize.scss links outline
+//////////////////////////////////////////////////////////////
+
+	@if normalize-get("links", "outline") {
+
+		@if normalize-get("options", "explanations comments") { 
+			/**
+			* Improve readability when focused and also mouse hovered in all browsers.
+			*/
+		}
+
+		a:active,
+		a:hover {
+			outline: 0;
+		}
+
+	}
+
+}

@@ -1,0 +1,49 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss embedded content
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("embedded content", "img") or
+  	normalize-get("embedded content", "svg") {
+
+	/* Embedded content
+	   ========================================================================== */
+
+
+// normalize.scss embedded content img
+//////////////////////////////////////////////////////////////
+
+    @if normalize-get("embedded content", "img") {
+
+		@if normalize-get("options", "explanations comments") {
+			/**
+			* Remove border when inside `a` element in IE 8/9/10.
+			*/
+		}
+
+		img {
+			border: 0;
+		}
+
+    }
+
+
+// normalize.scss embedded content svg
+//////////////////////////////////////////////////////////////
+
+    @if normalize-get("embedded content", "svg") {
+
+		@if normalize-get("options", "explanations comments") { 
+			/**
+			* Correct overflow not hidden in IE 9/10/11.
+			*/
+		}
+
+		svg:not(:root) {
+			overflow: hidden;
+		}
+
+    }
+
+}

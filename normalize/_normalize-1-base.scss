@@ -1,0 +1,46 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss base
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// normalize.scss base html
+//////////////////////////////////////////////////////////////
+
+@if normalize-get("base", "html") {
+
+	@if normalize-get("options", "explanations comments") { 
+		/**
+		* 1. Set default font family to sans-serif.
+		* 2. Prevent iOS text size adjust after orientation change, without disabling
+		*    user zoom.
+		*/
+	}
+
+	html {
+		font-family: sans-serif; @if normalize-get("options", "explanations comments") {  /* 1 */ }
+		-ms-text-size-adjust: 100%; @if normalize-get("options", "explanations comments") {  /* 2 */ }
+		-webkit-text-size-adjust: 100%; @if normalize-get("options", "explanations comments") {  /* 2 */ }
+	}
+
+}
+
+
+// normalize.scss reset margin
+//////////////////////////////////////////////////////////////
+
+@if normalize-get("base", "reset margin") {
+
+	$reset-margin-tags:if(normalize-get("base", "reset margin"),normalize-get("base", "reset margin"),"");
+
+	@if normalize-get("options", "explanations comments") {  
+		/**
+		* Remove default margin.
+		*/
+	}
+
+	#{$reset-margin-tags} {
+		margin: 0;
+	}
+
+}
