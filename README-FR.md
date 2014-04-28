@@ -1,9 +1,9 @@
 # normalize.scss
 
-normalize.scss is a configurable version of [normalize.css](http://necolas.github.io/normalize.css/), using CSS Sass preprocessor.
+normalize.scss est une version configurable de [normalize.css](http://necolas.github.io/normalize.css/) utilisant le préprocesseur CSS Sass. 
 
-1. [Install normalize.scss](#install-normalizescss)
-2. [Configure normalize.scss](#configure-normalizescss) 
+1. [Installer normalize.scss](#installer-normalizescss)
+2. [Configurer normalize.scss](#configurer-normalizescss) 
   * [options](#options)
   * [base](#base)
   * [html5 display definitions](#html5-display-definitions)
@@ -14,19 +14,19 @@ normalize.scss is a configurable version of [normalize.css](http://necolas.githu
   * [forms](#forms)
   * [tables](#tables)
 
-## Install normalize.scss
+## Installer normalize.scss
 
-- Download the project.
-- Copy the files to where you put your CSS files.
-- Call normalize.css in your html file :
+- Téléchargez le projet.
+- Copiez les fichiers à l'endroit où vous mettez vos fichiers CSS.
+- Appelez la feuille de styles normalize.css dans votre fichier html :
 
 ```html
 <link rel="stylesheet" href="normalize.css">
 ```
 
-## Configure normalize.scss
+## Configurer normalize.scss
 
-The configuration happens in the file normalize.scss.
+La configuration se passe dans le fichier normalize.scss
 
 ```scss
 $normalize-settings: (
@@ -46,22 +46,22 @@ $normalize-settings: (
 
 ##### `eplanations comments`
 
-- `true` : displays explanatory comments
-- `false` : hide explanatory comments
+- `true` : affiche les commentaires explicatifs de normalize.css
+- `false` : masque les commentaires explicatifs de normalize.css
 
 ### Base
 
 ```scss
 "base": (
 	"html":                           true, // true;false
-	"reset margin":                   "body"// false;"list of tags, in quotation marks, separated by commas"
+	"reset margin":                   "body"// false;"list separate with comma"
 ),
 ```
 
 ##### `html`
 
-- `true` : displays the code
-- `false` : hide the code
+- `true` : affiche le code ci-dessous
+- `false` : masque le code ci-dessous
 
 ```css
 /**
@@ -79,8 +79,8 @@ html {
 
 ##### `reset margin`
 
-- `"list of tags, in quotation marks, separated by commas"` : displays the code
-- `false` : hide the code
+- `"liste de balises, entre guillemets, séparés par une virgule"` : affiche le code ci-dessous
+- `false` : masque le code ci-dessous
 
 ```scss
 "reset margin":                   "body, div"
@@ -105,8 +105,8 @@ body, div {
 	"hidden template":                true  // true;false
 ),
 ```
-- `true` : displays the code
-- `false` : hide le code
+- `true` : affiche le code
+- `false` : n'affiche pas le code
 
 ##### `block`
 
@@ -187,8 +187,8 @@ template {
 	"outline":                        true  // true;false
 ),
 ```
-- `true` : displays the code
-- `false` : hide le code
+- `true` : affiche le code
+- `false` : n'affiche pas le code
 
 ##### `background`
 
@@ -228,8 +228,8 @@ a:hover {
 	"sub sup":                        true  // true;false
 ),
 ```
-- `true` : displays the code
-- `false` : hide le code
+- `true` : affiche le code
+- `false` : n'affiche pas le code
 
 ##### `abbr`
 
@@ -339,8 +339,8 @@ sub {
 	"svg":                            true  // true;false
 ),
 ```
-- `true` : displays the code
-- `false` : hide le code
+- `true` : affiche le code
+- `false` : n'affiche pas le code
 
 ##### `img`
 
@@ -376,8 +376,8 @@ svg:not(:root) {
 	"code kbd pre samp":              true  // true;false
 ),
 ```
-- `true` : displays the code
-- `false` : hide le code
+- `true` : affiche le code
+- `false` : n'affiche pas le code
 
 ##### `figure`
 
@@ -453,8 +453,8 @@ samp {
 	"optgroup":                       true  // true;false 
 ),
 ```
-- `true` : displays the code
-- `false` : hide le code
+- `true` : affiche le code
+- `false` : n'affiche pas le code
 
 ##### `form elements reset`
 
@@ -687,8 +687,8 @@ optgroup {
 	"td th":                          true  // true;false
 )
 ```
-- `true` : displays the code
-- `false` : hide le code
+- `true` : affiche le code
+- `false` : n'affiche pas le code
 
 ##### `table`
 
