@@ -18,8 +18,8 @@
 
 		@if normalize-get("options", "explanations comments") {
 			/**
-			* Remove border when inside `a` element in IE 8/9/10.
-			*/
+			 * Remove border when inside `a` element in IE 8/9/10.
+			 */
 		}
 
 		img {
@@ -36,8 +36,8 @@
 
 		@if normalize-get("options", "explanations comments") { 
 			/**
-			* Correct overflow not hidden in IE 9/10/11.
-			*/
+			 * Correct overflow not hidden in IE 9/10/11.
+			 */
 		}
 
 		svg:not(:root) {

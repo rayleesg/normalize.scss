@@ -20,8 +20,8 @@
 
 		@if normalize-get("options", "explanations comments") {
 			/**
-			* Address margin not present in IE 8/9 and Safari.
-			*/
+			 * Address margin not present in IE 8/9 and Safari.
+			 */
 		}
 
 		figure {
@@ -38,8 +38,8 @@
 
 		@if normalize-get("options", "explanations comments") {
 			/**
-			* Address differences between Firefox and other browsers.
-			*/
+			 * Address differences between Firefox and other browsers.
+			 */
 		}
 
 		hr {
@@ -58,8 +58,8 @@
 
 		@if normalize-get("options", "explanations comments") {
 			/**
-			* Contain overflow in all browsers.
-			*/
+			 * Contain overflow in all browsers.
+			 */
 		}
 
 		pre {
@@ -76,8 +76,8 @@
 
 		@if normalize-get("options", "explanations comments") {
 			/**
-			* Address odd `em`-unit font size rendering in all browsers.
-			*/
+			 * Address odd `em`-unit font size rendering in all browsers.
+			 */
 		}
 
 		code,
