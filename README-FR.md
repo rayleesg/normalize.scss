@@ -2,6 +2,8 @@
 
 normalize.scss est une version configurable de [normalize.css](http://necolas.github.io/normalize.css/) utilisant le préprocesseur CSS Sass. 
 
+[Version EN](https://github.com/Effeilo/normalize.scss/)
+
 1. [Installer normalize.scss](#installer-normalizescss)
 2. [Configurer normalize.scss](#configurer-normalizescss) 
   * [options](#options)
