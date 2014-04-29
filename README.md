@@ -1,4 +1,4 @@
-# normalize.scss
+# normalize.scss v3.0.1
 
 normalize.scss is a configurable version of [normalize.css](http://necolas.github.io/normalize.css/), using CSS Sass preprocessor.
 
