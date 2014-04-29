@@ -80,12 +80,12 @@ $normalize-settings: (
 // Normalize import
 //////////////////////////////////////////////////////////////
 
-@import "normalize/normalize-0-core";
-@import "normalize/normalize-1-base";
-@import "normalize/normalize-2-html5-display-definitions";
-@import "normalize/normalize-3-links";
-@import "normalize/normalize-4-text-level-semantics";
-@import "normalize/normalize-5-embedded-content";
-@import "normalize/normalize-6-grouping-content";
-@import "normalize/normalize-7-forms";
-@import "normalize/normalize-8-tables";
+@import "normalize/core";
+@import "normalize/base";
+@import "normalize/html5-display-definitions";
+@import "normalize/links";
+@import "normalize/text-level-semantics";
+@import "normalize/embedded-content";
+@import "normalize/grouping-content";
+@import "normalize/forms";
+@import "normalize/tables";
