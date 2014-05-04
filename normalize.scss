@@ -12,7 +12,14 @@
 $normalize-settings: (
 
 	"options": (
-		"explanations comments":          true  // true;false
+		"explanations comments":          true, // true;false
+		"legacy support for ie 11":       true, // true;false
+		"legacy support for ie 10":       true, // true;false
+		"legacy support for ie 9":        true, // true;false
+		"legacy support for safari":      true, // true;false
+		"legacy support for firefox":     true, // true;false
+		"legacy support for chrome":      true, // true;false
+		"legacy support for opera":       true, // true;false
 	),
 	"base": (
 		"html":                           true, // true;false

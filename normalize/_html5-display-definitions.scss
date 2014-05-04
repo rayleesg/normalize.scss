@@ -18,27 +18,31 @@
 
 	@if normalize-get("html5 display definitions", "block") {
 
-		@if normalize-get("options", "explanations comments") { 
-			/**
-			 * Correct `block` display not defined for any HTML5 element in IE 8/9.
-			 * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
-			 * Correct `block` display not defined for `main` in IE 11.
-			 */
-		}
+		@if normalize-get("options", "legacy support for ie 11") or normalize-get("options", "legacy support for firefox") {
 
-		article,
-		aside,
-		details,
-		figcaption,
-		figure,
-		footer,
-		header,
-		hgroup,
-		main,
-		nav,
-		section,
-		summary {
-			display: block;
+			@if normalize-get("options", "explanations comments") { 
+				/**
+				 * Correct `block` display not defined for any HTML5 element in IE 8/9.
+				 * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+				 * Correct `block` display not defined for `main` in IE 11.
+				 */
+			}
+
+			article,
+			aside,
+			details,
+			figcaption,
+			figure,
+			footer,
+			header,
+			hgroup,
+			main,
+			nav,
+			section,
+			summary {
+				display: block;
+			}
+
 		}
 
 	}
@@ -60,8 +64,8 @@
 		canvas,
 		progress,
 		video {
-			display: inline-block; @if normalize-get("options", "explanations comments") { /* 1 */ }
-			vertical-align: baseline; @if normalize-get("options", "explanations comments") { /* 2 */ }
+			@if normalize-get("options", "legacy support for ie 9") { display: inline-block; @if normalize-get("options", "explanations comments") { /* 1 */ } }
+			@if normalize-get("options", "legacy support for chrome") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for opera") { vertical-align: baseline; @if normalize-get("options", "explanations comments") { /* 2 */ } }
 		}
 
 	}
@@ -92,16 +96,20 @@
 
 	@if normalize-get("html5 display definitions", "hidden template") {
 
-		@if normalize-get("options", "explanations comments") { 
-			/**
-			 * Address `[hidden]` styling not present in IE 8/9/10.
-			 * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
-			 */
-		}
+		@if normalize-get("options", "legacy support for ie 11") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for firefox") {
 
-		[hidden],
-		template {
-			display: none;
+			@if normalize-get("options", "explanations comments") { 
+				/**
+				 * Address `[hidden]` styling not present in IE 8/9/10.
+				 * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+				 */
+			}
+
+			[hidden],
+			template {
+				display: none;
+			}
+
 		}
 
 	}

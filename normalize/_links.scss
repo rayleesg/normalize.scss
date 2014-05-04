@@ -16,14 +16,18 @@
 
 	@if normalize-get("links", "background") {
 
-		@if normalize-get("options", "explanations comments") { 
-			/**
-			 * Remove the gray background color from active links in IE 10.
-			 */
-		}
+		@if normalize-get("options", "legacy support for ie 10") {
 
-		a {
-			background: transparent;
+			@if normalize-get("options", "explanations comments") { 
+				/**
+				 * Remove the gray background color from active links in IE 10.
+				 */
+			}
+
+			a {
+				background: transparent;
+			}
+
 		}
 
 	}

@@ -18,14 +18,18 @@
 
 	@if normalize-get("grouping content", "figure") {
 
-		@if normalize-get("options", "explanations comments") {
-			/**
-			 * Address margin not present in IE 8/9 and Safari.
-			 */
-		}
+		@if normalize-get("options", "legacy support for ie 9") or normalize-get("options", "legacy support for safari") {
 
-		figure {
-			margin: 1em 40px;
+			@if normalize-get("options", "explanations comments") {
+				/**
+				 * Address margin not present in IE 8/9 and Safari.
+				 */
+			}
+
+			figure {
+				margin: 1em 40px;
+			}
+
 		}
 
 	}
@@ -36,16 +40,20 @@
 
     @if normalize-get("grouping content", "hr") {
 
-		@if normalize-get("options", "explanations comments") {
-			/**
-			 * Address differences between Firefox and other browsers.
-			 */
-		}
+    	@if normalize-get("options", "legacy support for firefox") {
 
-		hr {
-			-moz-box-sizing: content-box;
-			box-sizing: content-box;
-			height: 0;
+			@if normalize-get("options", "explanations comments") {
+				/**
+				 * Address differences between Firefox and other browsers.
+				 */
+			}
+
+			hr {
+				-moz-box-sizing: content-box;
+				box-sizing: content-box;
+				height: 0;
+			}
+
 		}
 
     }

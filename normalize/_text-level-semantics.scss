@@ -21,14 +21,18 @@
 
 	@if normalize-get("text level semantics", "abbr") {
 
-		@if normalize-get("options", "explanations comments") {
-			/**
-			 * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
-			 */
-		}
+		@if normalize-get("options", "legacy support for ie 11") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for chrome") {
 
-		abbr[title] {
-			border-bottom: 1px dotted;
+			@if normalize-get("options", "explanations comments") {
+				/**
+				 * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+				 */
+			}
+
+			abbr[title] {
+				border-bottom: 1px dotted;
+			}
+
 		}
 
 	}
@@ -39,15 +43,19 @@
 
 	@if normalize-get("text level semantics", "b strong") {
 
-		@if normalize-get("options", "explanations comments") {
-			/**
-			 * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
-			 */
-		}
+		@if normalize-get("options", "legacy support for firefox") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for chrome") {
 
-		b,
-		strong {
-			font-weight: bold;
+			@if normalize-get("options", "explanations comments") {
+				/**
+				 * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+				 */
+			}
+
+			b,
+			strong {
+				font-weight: bold;
+			}
+
 		}
 
 	}
@@ -58,14 +66,18 @@
 
     @if normalize-get("text level semantics", "dfn") {
 
-		@if normalize-get("options", "explanations comments") {
-			/**
-			 * Address styling not present in Safari and Chrome.
-			 */
-		}
+    	@if normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for chrome") {
 
-		dfn {
-			font-style: italic;
+			@if normalize-get("options", "explanations comments") {
+				/**
+				 * Address styling not present in Safari and Chrome.
+				 */
+			}
+
+			dfn {
+				font-style: italic;
+			}
+
 		}
 
     }
@@ -76,16 +88,20 @@
 
     @if normalize-get("text level semantics", "h1") {
 
-		@if normalize-get("options", "explanations comments") { 
-			/**
-			 * Address variable `h1` font-size and margin within `section` and `article`
-			 * contexts in Firefox 4+, Safari, and Chrome.
-			 */
-		}
+    	@if normalize-get("options", "legacy support for firefox") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for chrome") {
 
-		h1 {
-			font-size: 2em;
-			margin: 0.67em 0;
+			@if normalize-get("options", "explanations comments") { 
+				/**
+				 * Address variable `h1` font-size and margin within `section` and `article`
+				 * contexts in Firefox 4+, Safari, and Chrome.
+				 */
+			}
+
+			h1 {
+				font-size: 2em;
+				margin: 0.67em 0;
+			}
+
 		}
 
     }
@@ -96,15 +112,19 @@
 
     @if normalize-get("text level semantics", "mark") {
 
-		@if normalize-get("options", "explanations comments") { 
-			/**
-			 * Address styling not present in IE 8/9.
-			 */
-		}
+    	@if normalize-get("options", "legacy support for ie 9") {
 
-		mark {
-			background: #ff0;
-			color: #000;
+			@if normalize-get("options", "explanations comments") { 
+				/**
+				 * Address styling not present in IE 8/9.
+				 */
+			}
+
+			mark {
+				background: #ff0;
+				color: #000;
+			}
+
 		}
 
     }

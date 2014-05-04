@@ -50,7 +50,7 @@
 		textarea {
 			color: inherit; @if normalize-get("options", "explanations comments") { /* 1 */ }
 			font: inherit; @if normalize-get("options", "explanations comments") { /* 2 */ }
-			margin: 0; @if normalize-get("options", "explanations comments") { /* 3 */ }
+			@if normalize-get("options", "legacy support for firefox") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for chrome") { margin: 0; @if normalize-get("options", "explanations comments") { /* 3 */ } }
 		}
 
     }
@@ -61,14 +61,18 @@
 
     @if normalize-get("forms", "button overflow") {
 
-		@if normalize-get("options", "explanations comments") { 
-			/**
-			 * Address `overflow` set to `hidden` in IE 8/9/10/11.
-			 */
-		}
+    	@if normalize-get("options", "legacy support for ie 11") {
 
-		button {
-			overflow: visible;
+			@if normalize-get("options", "explanations comments") { 
+				/**
+				 * Address `overflow` set to `hidden` in IE 8/9/10/11.
+				 */
+			}
+
+			button {
+				overflow: visible;
+			}
+
 		}
 
     }
@@ -79,18 +83,22 @@
 
     @if normalize-get("forms", "button select text transform") {
 
-		@if normalize-get("options", "explanations comments") { 
-			/**
-			 * Address inconsistent `text-transform` inheritance for `button` and `select`.
-			 * All other form control elements do not inherit `text-transform` values.
-			 * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
-			 * Correct `select` style inheritance in Firefox.
-			 */
-		}
+    	@if normalize-get("options", "legacy support for ie 11") or normalize-get("options", "legacy support for firefox") or normalize-get("options", "legacy support for opera") {
 
-		button,
-		select {
-			text-transform: none;
+			@if normalize-get("options", "explanations comments") { 
+				/**
+				 * Address inconsistent `text-transform` inheritance for `button` and `select`.
+				 * All other form control elements do not inherit `text-transform` values.
+				 * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+				 * Correct `select` style inheritance in Firefox.
+				 */
+			}
+
+			button,
+			select {
+				text-transform: none;
+			}
+
 		}
 
     }
@@ -146,16 +154,20 @@
 
     @if normalize-get("forms", "button input focus inner") {
 
-		@if normalize-get("options", "explanations comments") {  
-			/**
-			 * Remove inner padding and border in Firefox 4+.
-			 */
-		}
+    	@if normalize-get("options", "legacy support for firefox") {
 
-		button::-moz-focus-inner,
-		input::-moz-focus-inner {
-			border: 0;
-			padding: 0;
+			@if normalize-get("options", "explanations comments") {  
+				/**
+				 * Remove inner padding and border in Firefox 4+.
+				 */
+			}
+
+			button::-moz-focus-inner,
+			input::-moz-focus-inner {
+				border: 0;
+				padding: 0;
+			}
+
 		}
 
     }
@@ -166,15 +178,19 @@
 
     @if normalize-get("forms", "input line height") {
 
-		@if normalize-get("options", "explanations comments") { 
-			/**
-			 * Address Firefox 4+ setting `line-height` on `input` using `!important` in
-			 * the UA stylesheet.
-			 */
-		}
+    	@if normalize-get("options", "legacy support for firefox") {
 
-		input {
-			line-height: normal;
+			@if normalize-get("options", "explanations comments") { 
+				/**
+				 * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+				 * the UA stylesheet.
+				 */
+			}
+
+			input {
+				line-height: normal;
+			}
+
 		}
 
     }
@@ -185,20 +201,24 @@
 
     @if normalize-get("forms", "input checkbox radio") {
 
-		@if normalize-get("options", "explanations comments") { 
-			/**
-			 * It's recommended that you don't attempt to style these elements.
-			 * Firefox's implementation doesn't respect box-sizing, padding, or width.
-			 *
-			 * 1. Address box sizing set to `content-box` in IE 8/9/10.
-			 * 2. Remove excess padding in IE 8/9/10.
-			 */
-		}
+    	@if normalize-get("options", "legacy support for ie 10") {
 
-		input[type="checkbox"],
-		input[type="radio"] {
-			box-sizing: border-box; @if normalize-get("options", "explanations comments") { /* 1 */ }
-			padding: 0; @if normalize-get("options", "explanations comments") { /* 2 */ }
+			@if normalize-get("options", "explanations comments") { 
+				/**
+				 * It's recommended that you don't attempt to style these elements.
+				 * Firefox's implementation doesn't respect box-sizing, padding, or width.
+				 *
+				 * 1. Address box sizing set to `content-box` in IE 8/9/10.
+				 * 2. Remove excess padding in IE 8/9/10.
+				 */
+			}
+
+			input[type="checkbox"],
+			input[type="radio"] {
+				box-sizing: border-box; @if normalize-get("options", "explanations comments") { /* 1 */ }
+				padding: 0; @if normalize-get("options", "explanations comments") { /* 2 */ }
+			}
+
 		}
 
     }
@@ -209,17 +229,21 @@
 
     @if normalize-get("forms", "input number") {
 
-		@if normalize-get("options", "explanations comments") {
-			/**
-			 * Fix the cursor style for Chrome's increment/decrement buttons. For certain
-			 * `font-size` values of the `input`, it causes the cursor style of the
-			 * decrement button to change from `default` to `text`.
-			 */
-		}
+    	@if normalize-get("options", "legacy support for chrome") {
 
-		input[type="number"]::-webkit-inner-spin-button,
-		input[type="number"]::-webkit-outer-spin-button {
-			height: auto;
+			@if normalize-get("options", "explanations comments") {
+				/**
+				 * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+				 * `font-size` values of the `input`, it causes the cursor style of the
+				 * decrement button to change from `default` to `text`.
+				 */
+			}
+
+			input[type="number"]::-webkit-inner-spin-button,
+			input[type="number"]::-webkit-outer-spin-button {
+				height: auto;
+			}
+
 		}
 
     }
@@ -230,32 +254,40 @@
 
     @if normalize-get("forms", "input search") {
 
-		@if normalize-get("options", "explanations comments") { 
-			/**
-			 * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
-			 * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
-			 *    (include `-moz` to future-proof).
-			 */
+    	@if normalize-get("options", "legacy support for chrome") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for firefox") {
+
+			@if normalize-get("options", "explanations comments") { 
+				/**
+				 * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+				 * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+				 *    (include `-moz` to future-proof).
+				 */
+			}
+
+			input[type="search"] {
+				-webkit-appearance: textfield; @if normalize-get("options", "explanations comments") { /* 1 */ }
+				-moz-box-sizing: content-box;
+				-webkit-box-sizing: content-box; @if normalize-get("options", "explanations comments") { /* 2 */ }
+				box-sizing: content-box;
+			}
+
 		}
 
-		input[type="search"] {
-			-webkit-appearance: textfield; @if normalize-get("options", "explanations comments") { /* 1 */ }
-			-moz-box-sizing: content-box;
-			-webkit-box-sizing: content-box; @if normalize-get("options", "explanations comments") { /* 2 */ }
-			box-sizing: content-box;
-		}
+		@if normalize-get("options", "legacy support for chrome") or normalize-get("options", "legacy support for safari") {
 
-		@if normalize-get("options", "explanations comments") {
-			/**
-			 * Remove inner padding and search cancel button in Safari and Chrome on OS X.
-			 * Safari (but not Chrome) clips the cancel button when the search input has
-			 * padding (and `textfield` appearance).
-			 */
-		}
+			@if normalize-get("options", "explanations comments") {
+				/**
+				 * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+				 * Safari (but not Chrome) clips the cancel button when the search input has
+				 * padding (and `textfield` appearance).
+				 */
+			}
 
-		input[type="search"]::-webkit-search-cancel-button,
-		input[type="search"]::-webkit-search-decoration {
-			-webkit-appearance: none;
+			input[type="search"]::-webkit-search-cancel-button,
+			input[type="search"]::-webkit-search-decoration {
+				-webkit-appearance: none;
+			}
+
 		}
 
     }
@@ -294,7 +326,7 @@
 		}
 
 		legend {
-			border: 0; @if normalize-get("options", "explanations comments") { /* 1 */ }
+			@if normalize-get("options", "legacy support for ie 11") { border: 0; @if normalize-get("options", "explanations comments") { /* 1 */ } }
 			padding: 0; @if normalize-get("options", "explanations comments") { /* 2 */ }
 		}
 
@@ -306,14 +338,18 @@
 
     @if normalize-get("forms", "textarea") {
 
-		@if normalize-get("options", "explanations comments") { 
-			/**
-			 * Remove default vertical scrollbar in IE 8/9/10/11.
-			 */
-		}
+    	@if normalize-get("options", "legacy support for ie 11") {
 
-		textarea {
-			overflow: auto;
+			@if normalize-get("options", "explanations comments") { 
+				/**
+				 * Remove default vertical scrollbar in IE 8/9/10/11.
+				 */
+			}
+
+			textarea {
+				overflow: auto;
+			}
+
 		}
 
     }
