@@ -12,67 +12,71 @@
 $normalize-settings: (
 
 	"options": (
-		"explanations comments":          true, // true;false
-		"legacy support for ie 11":       true, // true;false
-		"legacy support for ie 10":       true, // true;false
-		"legacy support for ie 9":        true, // true;false
-		"legacy support for safari":      true, // true;false
-		"legacy support for firefox":     true, // true;false
-		"legacy support for chrome":      true, // true;false
-		"legacy support for opera":       true, // true;false
+		"explanatory comments":           	  true, // true;false
+		"legacy support for": (
+			"ie 11":       					  true, // true;false
+			"ie 10":       					  true, // true;false
+			"ie 9":        					  true, // true;false
+			"safari":      					  true, // true;false
+			"firefox":     					  true, // true;false
+			"chrome":      					  true, // true;false
+			"opera":       					  true, // true;false
+		)
 	),
-	"base": (
-		"html":                           true, // true;false
-		"reset margin":                   "body"// false;"list, separate, with, comma"
-	),
-	"html5 display definitions": (
-		"block":                          true, // true;false
-		"inline block":                   true, // true;false
-		"audio":                          true, // true;false
-		"hidden template":                true  // true;false
-	),
-	"links": (
-		"background":                     true, // true;false
-		"outline":                        true  // true;false
-	),
-	"text level semantics": (
-		"abbr":                           true, // true;false
-		"b strong":                       true, // true;false
-		"dfn":                            true, // true;false
-		"h1":                             true, // true;false
-		"mark":                           true, // true;false
-		"small":                          true, // true;false
-		"sub sup":                        true  // true;false
-	),
-	"embedded content": (
-		"img":                            true, // true;false
-		"svg":                            true  // true;false
-	),
-	"grouping content": (
-		"figure":                         true, // true;false
-		"hr":                             true, // true;false
-		"pre":                            true, // true;false
-		"code kbd pre samp":              true  // true;false
-	),
-	"forms": (
-		"form elements reset":            true, // true;false
-		"button overflow":                true, // true;false
-		"button select text transform":   true, // true;false
-		"button appearance":              true, // true;false
-		"button input disabled":          true, // true;false
-		"button input focus inner":       true, // true;false
-		"input line height":              true, // true;false
-		"input checkbox radio":           true, // true;false
-		"input number":                   true, // true;false
-		"input search":                   true, // true;false
-		"fieldset":                       true, // true;false
-		"legend":                         true, // true;false
-		"textarea":                       true, // true;false 
-		"optgroup":                       true  // true;false 
-	),
-	"tables": (
-		"table":                          true, // true;false
-		"td th":                          true  // true;false
+	"parts": (
+		"base": (
+			"html":                           true, // true;false
+			"reset margin":                   "body"// false;"list, separate, with, comma"
+		),
+		"html5 display definitions": (
+			"block":                          true, // true;false
+			"inline block":                   true, // true;false
+			"audio":                          true, // true;false
+			"hidden template":                true  // true;false
+		),
+		"links": (
+			"background":                     true, // true;false
+			"outline":                        true  // true;false
+		),
+		"text level semantics": (
+			"abbr":                           true, // true;false
+			"b strong":                       true, // true;false
+			"dfn":                            true, // true;false
+			"h1":                             true, // true;false
+			"mark":                           true, // true;false
+			"small":                          true, // true;false
+			"sub sup":                        true  // true;false
+		),
+		"embedded content": (
+			"img":                            true, // true;false
+			"svg":                            true  // true;false
+		),
+		"grouping content": (
+			"figure":                         true, // true;false
+			"hr":                             true, // true;false
+			"pre":                            true, // true;false
+			"monospace":              		  true  // true;false
+		),
+		"forms": (
+			"form elements reset":            true, // true;false
+			"button overflow":                true, // true;false
+			"button select text transform":   true, // true;false
+			"button appearance":              true, // true;false
+			"button input disabled":          true, // true;false
+			"button input focus inner":       true, // true;false
+			"input line height":              true, // true;false
+			"input checkbox radio":           true, // true;false
+			"input number":                   true, // true;false
+			"input search":                   true, // true;false
+			"fieldset":                       true, // true;false
+			"legend":                         true, // true;false
+			"textarea":                       true, // true;false 
+			"optgroup":                       true  // true;false 
+		),
+		"tables": (
+			"table":                          true, // true;false
+			"td th":                          true  // true;false
+		)
 	)
 
 );
@@ -122,9 +126,9 @@ $normalize-settings: (
 // normalize.scss base html
 //////////////////////////////////////////////////////////////
 
-@if normalize-get("base", "html") {
+@if normalize-get("parts", "base", "html") {
 
-	@if normalize-get("options", "explanations comments") { 
+	@if normalize-get("options", "explanatory comments") { 
 		/**
 		 * 1. Set default font family to sans-serif.
 		 * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -133,9 +137,9 @@ $normalize-settings: (
 	}
 
 	html {
-		font-family: sans-serif; @if normalize-get("options", "explanations comments") {  /* 1 */ }
-		-ms-text-size-adjust: 100%; @if normalize-get("options", "explanations comments") {  /* 2 */ }
-		-webkit-text-size-adjust: 100%; @if normalize-get("options", "explanations comments") {  /* 2 */ }
+		font-family: sans-serif; @if normalize-get("options", "explanatory comments") {  /* 1 */ }
+		-ms-text-size-adjust: 100%; @if normalize-get("options", "explanatory comments") {  /* 2 */ }
+		-webkit-text-size-adjust: 100%; @if normalize-get("options", "explanatory comments") {  /* 2 */ }
 	}
 
 }
@@ -144,11 +148,11 @@ $normalize-settings: (
 // normalize.scss reset margin
 //////////////////////////////////////////////////////////////
 
-@if normalize-get("base", "reset margin") {
+@if normalize-get("parts", "base", "reset margin") {
 
-	$reset-margin-tags:if(normalize-get("base", "reset margin"),normalize-get("base", "reset margin"),"");
+	$reset-margin-tags:if(normalize-get("parts", "base", "reset margin"),normalize-get("parts", "base", "reset margin"),"");
 
-	@if normalize-get("options", "explanations comments") {  
+	@if normalize-get("options", "explanatory comments") {  
 		/**
 		 * Remove default margin.
 		 */
@@ -166,10 +170,10 @@ $normalize-settings: (
 //
 //////////////////////////////////////////////////////////////////////////////////////////
 
-@if normalize-get("html5 display definitions", "block") or
-	normalize-get("html5 display definitions", "inline block") or
-	normalize-get("html5 display definitions", "audio") or
-	normalize-get("html5 display definitions", "hidden template") {
+@if normalize-get("parts", "html5 display definitions", "block") or
+	normalize-get("parts", "html5 display definitions", "inline block") or
+	normalize-get("parts", "html5 display definitions", "audio") or
+	normalize-get("parts", "html5 display definitions", "hidden template") {
 
 	/* HTML5 display definitions
 	   ========================================================================== */
@@ -178,11 +182,12 @@ $normalize-settings: (
 // normalize.scss html5 display definitions block
 //////////////////////////////////////////////////////////////
 
-	@if normalize-get("html5 display definitions", "block") {
+	@if normalize-get("parts", "html5 display definitions", "block") {
+		
+		@if normalize-get("options", "legacy support for", "ie 11") or 
+			normalize-get("options", "legacy support for", "firefox") {
 
-		@if normalize-get("options", "legacy support for ie 11") or normalize-get("options", "legacy support for firefox") {
-
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * Correct `block` display not defined for any HTML5 element in IE 8/9.
 				 * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
@@ -213,9 +218,9 @@ $normalize-settings: (
 // normalize.scss html5 display definitions inline block
 //////////////////////////////////////////////////////////////
 
-	@if normalize-get("html5 display definitions", "inline block") {
+	@if normalize-get("parts", "html5 display definitions", "inline block") {
 
-		@if normalize-get("options", "explanations comments") { 
+		@if normalize-get("options", "explanatory comments") { 
 			/**
 			 * 1. Correct `inline-block` display not defined in IE 8/9.
 			 * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
@@ -226,8 +231,14 @@ $normalize-settings: (
 		canvas,
 		progress,
 		video {
-			@if normalize-get("options", "legacy support for ie 9") { display: inline-block; @if normalize-get("options", "explanations comments") { /* 1 */ } }
-			@if normalize-get("options", "legacy support for chrome") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for opera") { vertical-align: baseline; @if normalize-get("options", "explanations comments") { /* 2 */ } }
+			@if normalize-get("options", "legacy support for", "ie 9") { 
+				display: inline-block; @if normalize-get("options", "explanatory comments") { /* 1 */ } 
+			}
+			@if normalize-get("options", "legacy support for", "chrome") or 
+				normalize-get("options", "legacy support for", "safari") or 
+				normalize-get("options", "legacy support for", "opera") { 
+				vertical-align: baseline; @if normalize-get("options", "explanatory comments") { /* 2 */ } 
+			}
 		}
 
 	}
@@ -236,9 +247,9 @@ $normalize-settings: (
 // normalize.scss html5 display definitions audio
 //////////////////////////////////////////////////////////////
 
-	@if normalize-get("html5 display definitions", "audio") {
+	@if normalize-get("parts", "html5 display definitions", "audio") {
 
-		@if normalize-get("options", "explanations comments") { 
+		@if normalize-get("options", "explanatory comments") { 
 			/**
 			 * Prevent modern browsers from displaying `audio` without controls.
 			 * Remove excess height in iOS 5 devices.
@@ -256,11 +267,13 @@ $normalize-settings: (
 // normalize.scss html5 display definitions hidden template
 //////////////////////////////////////////////////////////////
 
-	@if normalize-get("html5 display definitions", "hidden template") {
+	@if normalize-get("parts", "html5 display definitions", "hidden template") {
 
-		@if normalize-get("options", "legacy support for ie 11") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for firefox") {
+		@if normalize-get("options", "legacy support for", "ie 11") or 
+			normalize-get("options", "legacy support for", "safari") or 
+			normalize-get("options", "legacy support for", "firefox") {
 
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * Address `[hidden]` styling not present in IE 8/9/10.
 				 * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
@@ -284,8 +297,8 @@ $normalize-settings: (
 //
 //////////////////////////////////////////////////////////////////////////////////////////
 
-@if normalize-get("links", "background") or
-	normalize-get("links", "outline") {
+@if normalize-get("parts", "links", "background") or
+	normalize-get("parts", "links", "outline") {
 
 	/* Links
 	   ========================================================================== */
@@ -294,11 +307,11 @@ $normalize-settings: (
 // normalize.scss links background
 //////////////////////////////////////////////////////////////
 
-	@if normalize-get("links", "background") {
+	@if normalize-get("parts", "links", "background") {
 
-		@if normalize-get("options", "legacy support for ie 10") {
+		@if normalize-get("options", "legacy support for", "ie 10") {
 
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * Remove the gray background color from active links in IE 10.
 				 */
@@ -316,9 +329,9 @@ $normalize-settings: (
 // normalize.scss links outline
 //////////////////////////////////////////////////////////////
 
-	@if normalize-get("links", "outline") {
+	@if normalize-get("parts", "links", "outline") {
 
-		@if normalize-get("options", "explanations comments") { 
+		@if normalize-get("options", "explanatory comments") { 
 			/**
 			 * Improve readability when focused and also mouse hovered in all browsers.
 			 */
@@ -339,13 +352,13 @@ $normalize-settings: (
 //
 //////////////////////////////////////////////////////////////////////////////////////////
 
-@if normalize-get("text level semantics", "abbr") or
-    normalize-get("text level semantics", "b strong") or
-    normalize-get("text level semantics", "dfn") or
-    normalize-get("text level semantics", "h1") or
-    normalize-get("text level semantics", "mark") or
-    normalize-get("text level semantics", "small") or
-    normalize-get("text level semantics", "sub sup") {
+@if normalize-get("parts", "text level semantics", "abbr") or
+    normalize-get("parts", "text level semantics", "b strong") or
+    normalize-get("parts", "text level semantics", "dfn") or
+    normalize-get("parts", "text level semantics", "h1") or
+    normalize-get("parts", "text level semantics", "mark") or
+    normalize-get("parts", "text level semantics", "small") or
+    normalize-get("parts", "text level semantics", "sub sup") {
 
     /* Text-level semantics
        ========================================================================== */
@@ -354,11 +367,13 @@ $normalize-settings: (
 // normalize.scss text level semantics abbr
 //////////////////////////////////////////////////////////////
 
-	@if normalize-get("text level semantics", "abbr") {
+	@if normalize-get("parts", "text level semantics", "abbr") {
 
-		@if normalize-get("options", "legacy support for ie 11") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for chrome") {
+		@if normalize-get("options", "legacy support for", "ie 11") or 
+			normalize-get("options", "legacy support for", "safari") or 
+			normalize-get("options", "legacy support for", "chrome") {
 
-			@if normalize-get("options", "explanations comments") {
+			@if normalize-get("options", "explanatory comments") {
 				/**
 				 * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
 				 */
@@ -376,11 +391,13 @@ $normalize-settings: (
 // normalize.scss text level semantics b strong
 //////////////////////////////////////////////////////////////
 
-	@if normalize-get("text level semantics", "b strong") {
+	@if normalize-get("parts", "text level semantics", "b strong") {
 
-		@if normalize-get("options", "legacy support for firefox") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for chrome") {
+		@if normalize-get("options", "legacy support for", "firefox") or 
+			normalize-get("options", "legacy support for", "safari") or 
+			normalize-get("options", "legacy support for", "chrome") {
 
-			@if normalize-get("options", "explanations comments") {
+			@if normalize-get("options", "explanatory comments") {
 				/**
 				 * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
 				 */
@@ -399,11 +416,12 @@ $normalize-settings: (
 // normalize.scss text level semantics dfn
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("text level semantics", "dfn") {
+    @if normalize-get("parts", "text level semantics", "dfn") {
 
-    	@if normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for chrome") {
+    	@if normalize-get("options", "legacy support for", "safari") or 
+    		normalize-get("options", "legacy support for", "chrome") {
 
-			@if normalize-get("options", "explanations comments") {
+			@if normalize-get("options", "explanatory comments") {
 				/**
 				 * Address styling not present in Safari and Chrome.
 				 */
@@ -421,11 +439,13 @@ $normalize-settings: (
 // normalize.scss text level semantics h1
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("text level semantics", "h1") {
+    @if normalize-get("parts", "text level semantics", "h1") {
 
-    	@if normalize-get("options", "legacy support for firefox") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for chrome") {
+    	@if normalize-get("options", "legacy support for", "firefox") or 
+	    	normalize-get("options", "legacy support for", "safari") or 
+	    	normalize-get("options", "legacy support for", "chrome") {
 
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * Address variable `h1` font-size and margin within `section` and `article`
 				 * contexts in Firefox 4+, Safari, and Chrome.
@@ -445,11 +465,11 @@ $normalize-settings: (
 // normalize.scss text level semantics mark
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("text level semantics", "mark") {
+    @if normalize-get("parts", "text level semantics", "mark") {
 
-    	@if normalize-get("options", "legacy support for ie 9") {
+    	@if normalize-get("options", "legacy support for", "ie 9") {
 
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * Address styling not present in IE 8/9.
 				 */
@@ -468,9 +488,9 @@ $normalize-settings: (
 // normalize.scss text level semantics small
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("text level semantics", "small") {
+    @if normalize-get("parts", "text level semantics", "small") {
 
-		@if normalize-get("options", "explanations comments") {
+		@if normalize-get("options", "explanatory comments") {
 			/**
 			 * Address inconsistent and variable font size in all browsers.
 			 */
@@ -486,9 +506,9 @@ $normalize-settings: (
 // normalize.scss text level semantics sub sup
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("text level semantics", "sub sup") {
+    @if normalize-get("parts", "text level semantics", "sub sup") {
 
-		@if normalize-get("options", "explanations comments") {
+		@if normalize-get("options", "explanatory comments") {
 			/**
 			 * Prevent `sub` and `sup` affecting `line-height` in all browsers.
 			 */
@@ -520,8 +540,8 @@ $normalize-settings: (
 //
 //////////////////////////////////////////////////////////////////////////////////////////
 
-@if normalize-get("embedded content", "img") or
-  	normalize-get("embedded content", "svg") {
+@if normalize-get("parts", "embedded content", "img") or
+  	normalize-get("parts", "embedded content", "svg") {
 
 	/* Embedded content
 	   ========================================================================== */
@@ -530,11 +550,11 @@ $normalize-settings: (
 // normalize.scss embedded content img
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("embedded content", "img") {
+    @if normalize-get("parts", "embedded content", "img") {
 
-    	@if normalize-get("options", "legacy support for ie 10") {
+    	@if normalize-get("options", "legacy support for", "ie 10") {
 
-			@if normalize-get("options", "explanations comments") {
+			@if normalize-get("options", "explanatory comments") {
 				/**
 				 * Remove border when inside `a` element in IE 8/9/10.
 				 */
@@ -552,11 +572,11 @@ $normalize-settings: (
 // normalize.scss embedded content svg
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("embedded content", "svg") {
+    @if normalize-get("parts", "embedded content", "svg") {
 
-    	@if normalize-get("options", "legacy support for ie 11") {
+    	@if normalize-get("options", "legacy support for", "ie 11") {
 
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * Correct overflow not hidden in IE 9/10/11.
 				 */
@@ -578,10 +598,10 @@ $normalize-settings: (
 //
 //////////////////////////////////////////////////////////////////////////////////////////
 
-@if normalize-get("grouping content", "figure") or
-  	normalize-get("grouping content", "hr") or
-  	normalize-get("grouping content", "pre") or
-  	normalize-get("grouping content", "code kbd pre samp") {
+@if normalize-get("parts", "grouping content", "figure") or
+  	normalize-get("parts", "grouping content", "hr") or
+  	normalize-get("parts", "grouping content", "pre") or
+  	normalize-get("parts", "grouping content", "monospace") {
 
 	/* Grouping content
 	   ========================================================================== */
@@ -590,11 +610,12 @@ $normalize-settings: (
 // normalize.scss grouping content figure
 //////////////////////////////////////////////////////////////
 
-	@if normalize-get("grouping content", "figure") {
+	@if normalize-get("parts", "grouping content", "figure") {
 
-		@if normalize-get("options", "legacy support for ie 9") or normalize-get("options", "legacy support for safari") {
+		@if normalize-get("options", "legacy support for", "ie 9") or 
+			normalize-get("options", "legacy support for", "safari") {
 
-			@if normalize-get("options", "explanations comments") {
+			@if normalize-get("options", "explanatory comments") {
 				/**
 				 * Address margin not present in IE 8/9 and Safari.
 				 */
@@ -612,11 +633,11 @@ $normalize-settings: (
 // normalize.scss grouping content hr
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("grouping content", "hr") {
+    @if normalize-get("parts", "grouping content", "hr") {
 
-    	@if normalize-get("options", "legacy support for firefox") {
+    	@if normalize-get("options", "legacy support for", "firefox") {
 
-			@if normalize-get("options", "explanations comments") {
+			@if normalize-get("options", "explanatory comments") {
 				/**
 				 * Address differences between Firefox and other browsers.
 				 */
@@ -636,9 +657,9 @@ $normalize-settings: (
 // normalize.scss grouping content pre
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("grouping content", "pre") {
+    @if normalize-get("parts", "grouping content", "pre") {
 
-		@if normalize-get("options", "explanations comments") {
+		@if normalize-get("options", "explanatory comments") {
 			/**
 			 * Contain overflow in all browsers.
 			 */
@@ -651,12 +672,12 @@ $normalize-settings: (
     }
 
 
-// normalize.scss grouping content code kbd pre samp
+// normalize.scss grouping content monospace
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("grouping content", "code kbd pre samp") {
+    @if normalize-get("parts", "grouping content", "code kbd pre samp") {
 
-		@if normalize-get("options", "explanations comments") {
+		@if normalize-get("options", "explanatory comments") {
 			/**
 			 * Address odd `em`-unit font size rendering in all browsers.
 			 */
@@ -680,24 +701,24 @@ $normalize-settings: (
 //
 //////////////////////////////////////////////////////////////////////////////////////////
 
-@if normalize-get("forms", "form elements reset") or
-	normalize-get("forms", "button overflow") or
-	normalize-get("forms", "button select text transform") or
-	normalize-get("forms", "button appearance") or
-	normalize-get("forms", "button input disabled") or
-	normalize-get("forms", "button input focus inner") or
-	normalize-get("forms", "input line height") or
-	normalize-get("forms", "input checkbox radio") or
-	normalize-get("forms", "input number") or
-	normalize-get("forms", "input search") or
-	normalize-get("forms", "fieldset") or
-	normalize-get("forms", "legend") or
-	normalize-get("forms", "textarea") {
+@if normalize-get("parts", "forms", "form elements reset") or
+	normalize-get("parts", "forms", "button overflow") or
+	normalize-get("parts", "forms", "button select text transform") or
+	normalize-get("parts", "forms", "button appearance") or
+	normalize-get("parts", "forms", "button input disabled") or
+	normalize-get("parts", "forms", "button input focus inner") or
+	normalize-get("parts", "forms", "input line height") or
+	normalize-get("parts", "forms", "input checkbox radio") or
+	normalize-get("parts", "forms", "input number") or
+	normalize-get("parts", "forms", "input search") or
+	normalize-get("parts", "forms", "fieldset") or
+	normalize-get("parts", "forms", "legend") or
+	normalize-get("parts", "forms", "textarea") {
 
 	/* Forms
 	   ========================================================================== */
 
-    @if normalize-get("options", "explanations comments") {
+    @if normalize-get("options", "explanatory comments") {
       /**
        * Known limitation: by default, Chrome and Safari on OS X allow very limited
        * styling of `select`, unless a `border` property is set.
@@ -708,9 +729,9 @@ $normalize-settings: (
 // normalize.scss forms form elements reset
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "form elements reset") {
+    @if normalize-get("parts", "forms", "form elements reset") {
 
-		@if normalize-get("options", "explanations comments") { 
+		@if normalize-get("options", "explanatory comments") { 
 			/**
 			 * 1. Correct color not being inherited.
 			 *    Known issue: affects color of disabled elements.
@@ -724,9 +745,13 @@ $normalize-settings: (
 		optgroup,
 		select,
 		textarea {
-			color: inherit; @if normalize-get("options", "explanations comments") { /* 1 */ }
-			font: inherit; @if normalize-get("options", "explanations comments") { /* 2 */ }
-			@if normalize-get("options", "legacy support for firefox") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for chrome") { margin: 0; @if normalize-get("options", "explanations comments") { /* 3 */ } }
+			color: inherit; @if normalize-get("options", "explanatory comments") { /* 1 */ }
+			font: inherit; @if normalize-get("options", "explanatory comments") { /* 2 */ }
+			@if normalize-get("options", "legacy support for", "firefox") or 
+				normalize-get("options", "legacy support for", "safari") or 
+				normalize-get("options", "legacy support for", "chrome") { 
+				margin: 0; @if normalize-get("options", "explanatory comments") { /* 3 */ } 
+			}
 		}
 
     }
@@ -735,11 +760,11 @@ $normalize-settings: (
 // normalize.scss forms button overflow
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "button overflow") {
+    @if normalize-get("parts", "forms", "button overflow") {
 
-    	@if normalize-get("options", "legacy support for ie 11") {
+    	@if normalize-get("options", "legacy support for", "ie 11") {
 
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * Address `overflow` set to `hidden` in IE 8/9/10/11.
 				 */
@@ -757,11 +782,13 @@ $normalize-settings: (
 // normalize.scss forms button select text transform
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "button select text transform") {
+    @if normalize-get("parts", "forms", "button select text transform") {
 
-    	@if normalize-get("options", "legacy support for ie 11") or normalize-get("options", "legacy support for firefox") or normalize-get("options", "legacy support for opera") {
+    	@if normalize-get("options", "legacy support for", "ie 11") or 
+	    	normalize-get("options", "legacy support for", "firefox") or 
+	    	normalize-get("options", "legacy support for", "opera") {
 
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * Address inconsistent `text-transform` inheritance for `button` and `select`.
 				 * All other form control elements do not inherit `text-transform` values.
@@ -783,9 +810,9 @@ $normalize-settings: (
 // normalize.scss forms button appearance
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "button appearance") {
+    @if normalize-get("parts", "forms", "button appearance") {
 
-		@if normalize-get("options", "explanations comments") { 
+		@if normalize-get("options", "explanatory comments") { 
 			/**
 			 * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
 			 *    and `video` controls.
@@ -798,9 +825,9 @@ $normalize-settings: (
 		button,
 		html input[type="button"], 
 		input[type="reset"],
-		input[type="submit"] { @if normalize-get("options", "explanations comments") { /* 1 */ }
-			-webkit-appearance: button; @if normalize-get("options", "explanations comments") { /* 2 */ }
-			cursor: pointer; @if normalize-get("options", "explanations comments") { /* 3 */ }
+		input[type="submit"] { @if normalize-get("options", "explanatory comments") { /* 1 */ }
+			-webkit-appearance: button; @if normalize-get("options", "explanatory comments") { /* 2 */ }
+			cursor: pointer; @if normalize-get("options", "explanatory comments") { /* 3 */ }
 		}
 
     }
@@ -809,9 +836,9 @@ $normalize-settings: (
 // normalize.scss forms button input disabled
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "button input disabled") {
+    @if normalize-get("parts", "forms", "button input disabled") {
 
-		@if normalize-get("options", "explanations comments") {  
+		@if normalize-get("options", "explanatory comments") {  
 			/**
 			 * Re-set default cursor for disabled elements.
 			 */
@@ -828,11 +855,11 @@ $normalize-settings: (
 // normalize.scss forms button input focus inner
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "button input focus inner") {
+    @if normalize-get("parts", "forms", "button input focus inner") {
 
-    	@if normalize-get("options", "legacy support for firefox") {
+    	@if normalize-get("options", "legacy support for", "firefox") {
 
-			@if normalize-get("options", "explanations comments") {  
+			@if normalize-get("options", "explanatory comments") {  
 				/**
 				 * Remove inner padding and border in Firefox 4+.
 				 */
@@ -852,11 +879,11 @@ $normalize-settings: (
 // normalize.scss forms input line height
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "input line height") {
+    @if normalize-get("parts", "forms", "input line height") {
 
-    	@if normalize-get("options", "legacy support for firefox") {
+    	@if normalize-get("options", "legacy support for", "firefox") {
 
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * Address Firefox 4+ setting `line-height` on `input` using `!important` in
 				 * the UA stylesheet.
@@ -875,11 +902,11 @@ $normalize-settings: (
 // normalize.scss forms input checkbox radio
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "input checkbox radio") {
+    @if normalize-get("parts", "forms", "input checkbox radio") {
 
-    	@if normalize-get("options", "legacy support for ie 10") {
+    	@if normalize-get("options", "legacy support for", "ie 10") {
 
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * It's recommended that you don't attempt to style these elements.
 				 * Firefox's implementation doesn't respect box-sizing, padding, or width.
@@ -891,8 +918,8 @@ $normalize-settings: (
 
 			input[type="checkbox"],
 			input[type="radio"] {
-				box-sizing: border-box; @if normalize-get("options", "explanations comments") { /* 1 */ }
-				padding: 0; @if normalize-get("options", "explanations comments") { /* 2 */ }
+				box-sizing: border-box; @if normalize-get("options", "explanatory comments") { /* 1 */ }
+				padding: 0; @if normalize-get("options", "explanatory comments") { /* 2 */ }
 			}
 
 		}
@@ -903,11 +930,11 @@ $normalize-settings: (
 // normalize.scss forms input number
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "input number") {
+    @if normalize-get("parts", "forms", "input number") {
 
-    	@if normalize-get("options", "legacy support for chrome") {
+    	@if normalize-get("options", "legacy support for", "chrome") {
 
-			@if normalize-get("options", "explanations comments") {
+			@if normalize-get("options", "explanatory comments") {
 				/**
 				 * Fix the cursor style for Chrome's increment/decrement buttons. For certain
 				 * `font-size` values of the `input`, it causes the cursor style of the
@@ -928,11 +955,13 @@ $normalize-settings: (
 // normalize.scss forms input search
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "input search") {
+    @if normalize-get("parts", "forms", "input search") {
 
-    	@if normalize-get("options", "legacy support for chrome") or normalize-get("options", "legacy support for safari") or normalize-get("options", "legacy support for firefox") {
+    	@if normalize-get("options", "legacy support for", "chrome") or 
+	    	normalize-get("options", "legacy support for", "safari") or 
+	    	normalize-get("options", "legacy support for", "firefox") {
 
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
 				 * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
@@ -941,17 +970,18 @@ $normalize-settings: (
 			}
 
 			input[type="search"] {
-				-webkit-appearance: textfield; @if normalize-get("options", "explanations comments") { /* 1 */ }
+				-webkit-appearance: textfield; @if normalize-get("options", "explanatory comments") { /* 1 */ }
 				-moz-box-sizing: content-box;
-				-webkit-box-sizing: content-box; @if normalize-get("options", "explanations comments") { /* 2 */ }
+				-webkit-box-sizing: content-box; @if normalize-get("options", "explanatory comments") { /* 2 */ }
 				box-sizing: content-box;
 			}
 
 		}
 
-		@if normalize-get("options", "legacy support for chrome") or normalize-get("options", "legacy support for safari") {
+		@if normalize-get("options", "legacy support for", "chrome") or 
+			normalize-get("options", "legacy support for", "safari") {
 
-			@if normalize-get("options", "explanations comments") {
+			@if normalize-get("options", "explanatory comments") {
 				/**
 				 * Remove inner padding and search cancel button in Safari and Chrome on OS X.
 				 * Safari (but not Chrome) clips the cancel button when the search input has
@@ -972,9 +1002,9 @@ $normalize-settings: (
 // normalize.scss forms fieldset
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "fieldset") {
+    @if normalize-get("parts", "forms", "fieldset") {
 
-		@if normalize-get("options", "explanations comments") {
+		@if normalize-get("options", "explanatory comments") {
 			/**
 			 * Define consistent border, margin, and padding.
 			 */
@@ -992,9 +1022,9 @@ $normalize-settings: (
 // normalize.scss forms legend
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "legend") {
+    @if normalize-get("parts", "forms", "legend") {
 
-		@if normalize-get("options", "explanations comments") {
+		@if normalize-get("options", "explanatory comments") {
 			/**
 			 * 1. Correct `color` not being inherited in IE 8/9/10/11.
 			 * 2. Remove padding so people aren't caught out if they zero out fieldsets.
@@ -1002,8 +1032,10 @@ $normalize-settings: (
 		}
 
 		legend {
-			@if normalize-get("options", "legacy support for ie 11") { border: 0; @if normalize-get("options", "explanations comments") { /* 1 */ } }
-			padding: 0; @if normalize-get("options", "explanations comments") { /* 2 */ }
+			@if normalize-get("options", "legacy support for", "ie 11") { 
+				border: 0; @if normalize-get("options", "explanatory comments") { /* 1 */ } 
+			}
+			padding: 0; @if normalize-get("options", "explanatory comments") { /* 2 */ }
 		}
 
     }
@@ -1012,11 +1044,11 @@ $normalize-settings: (
 // normalize.scss forms textarea
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "textarea") {
+    @if normalize-get("parts", "forms", "textarea") {
 
-    	@if normalize-get("options", "legacy support for ie 11") {
+    	@if normalize-get("options", "legacy support for", "ie 11") {
 
-			@if normalize-get("options", "explanations comments") { 
+			@if normalize-get("options", "explanatory comments") { 
 				/**
 				 * Remove default vertical scrollbar in IE 8/9/10/11.
 				 */
@@ -1034,9 +1066,9 @@ $normalize-settings: (
 // normalize.scss forms optgroup
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("forms", "optgroup") {
+    @if normalize-get("parts", "forms", "optgroup") {
 
-		@if normalize-get("options", "explanations comments") {
+		@if normalize-get("options", "explanatory comments") {
 			/**
 			 * Don't inherit the `font-weight` (applied by a rule above).
 			 * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
@@ -1057,8 +1089,8 @@ $normalize-settings: (
 //
 //////////////////////////////////////////////////////////////////////////////////////////
 
-@if normalize-get("tables", "table") or
-	normalize-get("tables", "td th") {
+@if normalize-get("parts", "tables", "table") or
+	normalize-get("parts", "tables", "td th") {
 
 	/* Tables
 	   ========================================================================== */
@@ -1067,9 +1099,9 @@ $normalize-settings: (
 // normalize.scss tables table
 //////////////////////////////////////////////////////////////
 
-	@if normalize-get("tables", "table") {
+	@if normalize-get("parts", "tables", "table") {
 
-		@if normalize-get("options", "explanations comments") {
+		@if normalize-get("options", "explanatory comments") {
 			/**
 			 * Remove most spacing between table cells.
 			 */
@@ -1086,7 +1118,7 @@ $normalize-settings: (
 // normalize.scss tables td th
 //////////////////////////////////////////////////////////////
 
-    @if normalize-get("tables", "td th") {
+    @if normalize-get("parts", "tables", "td th") {
 
 		td,
 		th {
