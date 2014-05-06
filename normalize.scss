@@ -12,70 +12,70 @@
 $normalize-settings: (
 
 	"options": (
-		"explanatory comments":           	  true, // true;false
+		"explanatory comments":           	true, // true;false
 		"legacy support for": (
-			"ie 11":       					  true, // true;false
-			"ie 10":       					  true, // true;false
-			"ie 9":        					  true, // true;false
-			"safari":      					  true, // true;false
-			"firefox":     					  true, // true;false
-			"chrome":      					  true, // true;false
-			"opera":       					  true, // true;false
+			"ie 11":       			true, // true;false
+			"ie 10":       			true, // true;false
+			"ie 9":        			true, // true;false
+			"safari":      			true, // true;false
+			"firefox":     			true, // true;false
+			"chrome":      			true, // true;false
+			"opera":       			true, // true;false
 		)
 	),
 	"parts": (
 		"base": (
-			"html":                           true, // true;false
-			"reset margin":                   "body"// false;"list, separate, with, comma"
+			"html":                         true, // true;false
+			"reset margin":                 "body"// false;"list, separate, with, comma"
 		),
 		"html5 display definitions": (
-			"block":                          true, // true;false
-			"inline block":                   true, // true;false
-			"audio":                          true, // true;false
-			"hidden template":                true  // true;false
+			"block":                        true, // true;false
+			"inline block":                 true, // true;false
+			"audio":                        true, // true;false
+			"hidden template":              true  // true;false
 		),
 		"links": (
-			"background":                     true, // true;false
-			"outline":                        true  // true;false
+			"background":                   true, // true;false
+			"outline":                      true  // true;false
 		),
 		"text level semantics": (
-			"abbr":                           true, // true;false
-			"b strong":                       true, // true;false
-			"dfn":                            true, // true;false
-			"h1":                             true, // true;false
-			"mark":                           true, // true;false
-			"small":                          true, // true;false
-			"sub sup":                        true  // true;false
+			"abbr":                         true, // true;false
+			"b strong":                     true, // true;false
+			"dfn":                          true, // true;false
+			"h1":                           true, // true;false
+			"mark":                         true, // true;false
+			"small":                        true, // true;false
+			"sub sup":                      true  // true;false
 		),
 		"embedded content": (
-			"img":                            true, // true;false
-			"svg":                            true  // true;false
+			"img":                          true, // true;false
+			"svg":                          true  // true;false
 		),
 		"grouping content": (
-			"figure":                         true, // true;false
-			"hr":                             true, // true;false
-			"pre":                            true, // true;false
-			"monospace":              		  true  // true;false
+			"figure":                       true, // true;false
+			"hr":                           true, // true;false
+			"pre":                          true, // true;false
+			"monospace":              	true  // true;false
 		),
 		"forms": (
-			"form elements reset":            true, // true;false
-			"button overflow":                true, // true;false
-			"button select text transform":   true, // true;false
-			"button appearance":              true, // true;false
-			"button input disabled":          true, // true;false
-			"button input focus inner":       true, // true;false
-			"input line height":              true, // true;false
-			"input checkbox radio":           true, // true;false
-			"input number":                   true, // true;false
-			"input search":                   true, // true;false
-			"fieldset":                       true, // true;false
-			"legend":                         true, // true;false
-			"textarea":                       true, // true;false 
-			"optgroup":                       true  // true;false 
+			"form elements reset":          true, // true;false
+			"button overflow":              true, // true;false
+			"button select text transform": true, // true;false
+			"button appearance":            true, // true;false
+			"button input disabled":        true, // true;false
+			"button input focus inner":     true, // true;false
+			"input line height":            true, // true;false
+			"input checkbox radio":         true, // true;false
+			"input number":                 true, // true;false
+			"input search":                 true, // true;false
+			"fieldset":                     true, // true;false
+			"legend":                       true, // true;false
+			"textarea":                     true, // true;false 
+			"optgroup":                     true  // true;false 
 		),
 		"tables": (
-			"table":                          true, // true;false
-			"td th":                          true  // true;false
+			"table":                        true, // true;false
+			"td th":                        true  // true;false
 		)
 	)
 
