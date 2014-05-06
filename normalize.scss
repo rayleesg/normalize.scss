@@ -137,9 +137,9 @@ $normalize-settings: (
 	}
 
 	html {
-		font-family: sans-serif; @if normalize-get("options", "explanatory comments") {  /* 1 */ }
-		-ms-text-size-adjust: 100%; @if normalize-get("options", "explanatory comments") {  /* 2 */ }
-		-webkit-text-size-adjust: 100%; @if normalize-get("options", "explanatory comments") {  /* 2 */ }
+		font-family: sans-serif; @if normalize-get("options", "explanatory comments") { /* 1 */ }
+		-ms-text-size-adjust: 100%; @if normalize-get("options", "explanatory comments") { /* 2 */ }
+		-webkit-text-size-adjust: 100%; @if normalize-get("options", "explanatory comments") { /* 2 */ }
 	}
 
 }
