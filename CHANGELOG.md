@@ -2,4 +2,4 @@
 
 * Browsers support
 * Select the modules and the rules
-* mMdia view or delete explanatory comments
+* Media view or delete explanatory comments
