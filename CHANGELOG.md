@@ -7,4 +7,4 @@
 
 * Insert or remove any part of code of normalize
 * Insert or remove explanatory comments
-* Browsers supports.
+* Browsers supports
