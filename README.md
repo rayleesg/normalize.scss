@@ -1,27 +1,26 @@
 # normalize.scss v3.0.1.0
 
-[Version EN](https://github.com/Effeilo/normalize.scss/blob/master/README.md)
+[Version FR](https://github.com/Effeilo/normalize.scss/blob/master/README-FR.md)
 
-Normalize.scss est une version configurable de [normalize.css](http://necolas.github.io/normalize.css/), utilisant Sass. 
+Normalize.scss is a configurable version of [normalize.css](http://necolas.github.io/normalize.css/), using Sass. 
 
-Normalize.scss permet de configurer simplement et rapidement normalise.css. Choisissez les règles, ajoutez ou supprimez les commentaires explicatifs et le support d'IE7.
+Normalize.scss allows to simply and quickly configure normalise.css. Select the rules, add or remove explanatory comments and IE7 support.
 
-[le site du projet](http://www.effeiloweb.fr/normalize.scss/)
+[The project page](http://www.effeiloweb.fr/normalize.scss/)
 
-## Uiliser normalize.scss
+## Use normalize.scss
 
-* [Téléchargez normalize.scss depuis le site du projet](http://www.effeiloweb.fr/normalize.scss/), puis copiez les fichiers à l'endroit où vous placez vos fichiers CSS. 
-* Lancez la ligne de commande suivante pour que Sass génère votre fichier css : 
+* [Download normalize.scss from the project page](http://www.effeiloweb.fr/normalize.scss/), and copy the files to where you put your CSS files.
+* Run the following command line for Sass generates your css file:
 ```
 sass --watch normalize.scss:normalize.css
 ```
-* Ouvrez le fichier normalize.scss dans votre éditeur de texte et modifiez les variables de configuration selon vos besoins. 
+* Open normalize.scss in your text editor and change the configuration variables as needed.
 
-## Configurer normalize.scss
+## Configure normalize.scss
 
-Pour plus d'informations sur la configuration de normalize.scss, vous pouvez vous rendre sur la [documentation en ligne](http://www.effeiloweb.fr/normalize.scss/doc.html).
+For more informations on configuring normalize.scss, you can go to the [online documentation](http://www.effeiloweb.fr/normalize.scss/doc.html).
 
 ## Why normalize.scss
 
-Pour comprendre pourquoi cette version scss de normalize.css, vous pouvez lire l'article "[à propos de normalize.scss" (FR)](http://blog.effeiloweb.fr/a-propos-de-normalize-scss/)".
-
+To understand why this scss version of normalize.css, you can read the article "[About normalize.scss (FR)](http://blog.effeiloweb.fr/a-propos-de-normalize-scss/)".
