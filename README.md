@@ -23,5 +23,5 @@ For more informations on configuring normalize.scss, you can go to the [online d
 
 ## Why normalize.scss
 
-To understand why this scss version of normalize.css, you can read the article "[About normalize.scss (FR)](http://blog.effeiloweb.fr/a-propos-de-normalize-css/)".
+To understand why this scss version of normalize.css, you can read the article "[About normalize.scss (FR)](http://blog.effeiloweb.fr/a-propos-de-normalize-scss/)".
 
