@@ -13,7 +13,7 @@ $normalize-settings: (
 
 	"options": (
 		"explanatory comments":true, // true;false
-		"legacy support for ie7":false // true;false
+		"legacy support for ie7":true // true;false
 	),
 	"parts": (
 		"base": (
@@ -47,7 +47,7 @@ $normalize-settings: (
 			"figure":true, // true;false
 			"hr":true, // true;false
 			"pre":true, // true;false
-			"monospace":true  // true;false
+			"monospace":true // true;false
 		),
 		"forms": (
 			"form elements reset":true, // true;false

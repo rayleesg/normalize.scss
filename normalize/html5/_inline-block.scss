@@ -10,9 +10,9 @@
 
 		@if normalize-get("options", "legacy support for ie7") {
 /**
- * 0. Has layout for IE 7.
  * 1. Correct `inline-block` display not defined in IE 7/8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ * 2. Has layout for IE 7.
+ * 3. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
 		}
 
@@ -31,10 +31,10 @@
 	video {
 		display: inline-block; @if normalize-get("options", "explanatory comments") { /* 1 */ } 
 		@if normalize-get("options", "legacy support for ie7") {
-			*display: inline; @if normalize-get("options", "explanatory comments") { /* 0 */ } 
-			*zoom: 1; @if normalize-get("options", "explanatory comments") { /* 0 */ } 
+			*display: inline; @if normalize-get("options", "explanatory comments") { /* 2 */ } 
+			*zoom: 1; @if normalize-get("options", "explanatory comments") { /* 2 */ } 
 		}
-		vertical-align: baseline; @if normalize-get("options", "explanatory comments") { /* 2 */ } 
+		vertical-align: baseline; @if normalize-get("options", "explanatory comments") { @if normalize-get("options", "legacy support for ie7") { /* 3 */ } @else { /* 2 */ } }
 	}
 
 }
