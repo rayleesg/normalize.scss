@@ -98,13 +98,30 @@
 
 }
 
-
+@import "normalize/text-level/abbr";
+@import "normalize/text-level/bold";
 @import "normalize/text-level/dfn";
 @import "normalize/text-level/headers";
 @import "normalize/text-level/mark";
+@import "normalize/text-level/p";
+@import "normalize/text-level/q";
 @import "normalize/text-level/small";
 @import "normalize/text-level/sub-sup";
 
+
+// Lists
+//////////////////////////////////////////////////////////////
+
+@if normalize-get("options", "legacy support for ie7") {
+
+    /* Lists
+       ========================================================================== */
+
+}
+
+@import "normalize/lists/margin";
+@import "normalize/lists/padding";
+@import "normalize/lists/list-style";
 
 // text level embedded content
 //////////////////////////////////////////////////////////////
@@ -170,6 +187,7 @@
 
 }
 
+@import "normalize/forms/form";
 @import "normalize/forms/form-elements-reset";
 @import "normalize/forms/button-overflow";
 @import "normalize/forms/button-select-text-transform";

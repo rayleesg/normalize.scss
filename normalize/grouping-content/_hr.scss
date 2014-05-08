@@ -6,20 +6,27 @@
 
 @if normalize-get("parts", "grouping content", "hr") {
 
-	@if normalize-get("options", "legacy support for", "firefox") {
+	@if normalize-get("options", "explanatory comments") { 
 
-		@if normalize-get("options", "explanatory comments") {
-			/**
-			 * Address differences between Firefox and other browsers.
-			 */
+		@if normalize-get("options", "legacy support for ie7") {
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 7 normalization.
+ */
 		}
 
-		hr {
-			-moz-box-sizing: content-box;
-			box-sizing: content-box;
-			height: 0;
+		@else {
+/**
+ * Address differences between Firefox and other browsers.
+ */
 		}
 
+	}
+
+	hr {
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+		height: 0;
 	}
 
 }

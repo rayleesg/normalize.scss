@@ -7,9 +7,9 @@
 @if normalize-get("parts", "text level semantics", "sub sup") {
 
 	@if normalize-get("options", "explanatory comments") {
-		/**
-		 * Prevent `sub` and `sup` affecting `line-height` in all browsers.
-		 */
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
 	}
 
 	sub,

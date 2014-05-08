@@ -1,23 +1,19 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 //
-// normalize.scss html5 hidden
+// normalize.scss links background
 //
 //////////////////////////////////////////////////////////////////////////////////////////
 
 @if normalize-get("parts", "links", "background") {
 
-	@if normalize-get("options", "legacy support for", "ie 10") {
+	@if normalize-get("options", "explanatory comments") { 
+/**
+* Remove the gray background color from active links in IE 10.
+*/
+	}
 
-		@if normalize-get("options", "explanatory comments") { 
-			/**
-			 * Remove the gray background color from active links in IE 10.
-			 */
-		}
-
-		a {
-			background: transparent;
-		}
-
+	a {
+		background: transparent;
 	}
 
 }

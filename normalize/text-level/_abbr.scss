@@ -6,20 +6,24 @@
 
 @if normalize-get("parts", "text level semantics", "abbr") {
 
-	@if normalize-get("options", "legacy support for", "ie 11") or 
-		normalize-get("options", "legacy support for", "safari") or 
-		normalize-get("options", "legacy support for", "chrome") {
+	@if normalize-get("options", "explanatory comments") { 
 
-		@if normalize-get("options", "explanatory comments") {
-			/**
-			 * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
-			 */
+		@if normalize-get("options", "legacy support for ie7") {
+/**
+ * Address styling not present in IE 7/8/9/10/11, Safari, and Chrome.
+ */
 		}
 
-		abbr[title] {
-			border-bottom: 1px dotted;
+		@else {
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
 		}
 
+	}
+
+	abbr[title] {
+		border-bottom: 1px dotted;
 	}
 
 }

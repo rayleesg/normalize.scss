@@ -1,21 +1,19 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 //
-// normalize.scss forms fieldset
+// normalize.scss forms form
 //
 //////////////////////////////////////////////////////////////////////////////////////////
 
-@if normalize-get("parts", "forms", "fieldset") {
+@if normalize-get("options", "legacy support for ie7") {
 
 	@if normalize-get("options", "explanatory comments") {
 /**
- * Define consistent border, margin, and padding.
+ * Correct margin displayed oddly in IE 7.
  */
 	}
 
-	fieldset {
-		border: 1px solid #c0c0c0;
-		margin: 0 2px;
-		padding: 0.35em 0.625em 0.75em;
+	form {
+	    margin: 0;
 	}
 
 }

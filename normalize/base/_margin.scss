@@ -9,9 +9,9 @@
 	$reset-margin-tags:if(normalize-get("parts", "base", "reset margin"),normalize-get("parts", "base", "reset margin"),"");
 
 	@if normalize-get("options", "explanatory comments") {  
-		/**
-		 * Remove default margin.
-		 */
+/**
+ * Remove default margin.
+ */
 	}
 
 	#{$reset-margin-tags} {

@@ -7,9 +7,9 @@
 @if normalize-get("parts", "forms", "button input disabled") {
 
 	@if normalize-get("options", "explanatory comments") {  
-		/**
-		 * Re-set default cursor for disabled elements.
-		 */
+/**
+ * Re-set default cursor for disabled elements.
+ */
 	}
 
 	button[disabled],

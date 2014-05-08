@@ -7,9 +7,9 @@
 @if normalize-get("parts", "tables", "table") {
 
 	@if normalize-get("options", "explanatory comments") {
-		/**
-		 * Remove most spacing between table cells.
-		 */
+/**
+ * Remove most spacing between table cells.
+ */
 	}
 
 	table {

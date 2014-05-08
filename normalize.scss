@@ -13,18 +13,7 @@ $normalize-settings: (
 
 	"options": (
 		"explanatory comments":true, // true;false
-		"legacy support for": (
-			"ie 6":true, // true;false
-			"ie 7":true, // true;false
-			"ie 8":true, // true;false
-			"ie 9":true, // true;false
-			"ie 10":true, // true;false
-			"ie 11":true, // true;false
-			"safari":true, // true;false
-			"firefox":true, // true;false
-			"chrome":true, // true;false
-			"opera":true, // true;false
-		)
+		"legacy support for ie7":false // true;false
 	),
 	"parts": (
 		"base": (
