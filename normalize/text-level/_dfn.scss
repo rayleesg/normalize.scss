@@ -1,0 +1,24 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss text level semantics dfn
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("parts", "text level semantics", "dfn") {
+
+	@if normalize-get("options", "legacy support for", "safari") or 
+		normalize-get("options", "legacy support for", "chrome") {
+
+		@if normalize-get("options", "explanatory comments") {
+			/**
+			 * Address styling not present in Safari and Chrome.
+			 */
+		}
+
+		dfn {
+			font-style: italic;
+		}
+
+	}
+
+}

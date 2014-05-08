@@ -1,0 +1,25 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss grouping content hr
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("parts", "grouping content", "hr") {
+
+	@if normalize-get("options", "legacy support for", "firefox") {
+
+		@if normalize-get("options", "explanatory comments") {
+			/**
+			 * Address differences between Firefox and other browsers.
+			 */
+		}
+
+		hr {
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+			height: 0;
+		}
+
+	}
+
+}

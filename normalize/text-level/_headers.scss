@@ -1,0 +1,27 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss text level semantics headers
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("parts", "text level semantics", "headers") {
+
+	@if normalize-get("options", "legacy support for", "firefox") or 
+    	normalize-get("options", "legacy support for", "safari") or 
+    	normalize-get("options", "legacy support for", "chrome") {
+
+		@if normalize-get("options", "explanatory comments") { 
+			/**
+			 * Address variable `h1` font-size and margin within `section` and `article`
+			 * contexts in Firefox 4+, Safari, and Chrome.
+			 */
+		}
+
+		h1 {
+			font-size: 2em;
+			margin: 0.67em 0;
+		}
+
+	}
+
+}

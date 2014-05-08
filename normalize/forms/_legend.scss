@@ -1,0 +1,23 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss forms legend
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("parts", "forms", "legend") {
+
+	@if normalize-get("options", "explanatory comments") {
+		/**
+		 * 1. Correct `color` not being inherited in IE 8/9/10/11.
+		 * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+		 */
+	}
+
+	legend {
+		@if normalize-get("options", "legacy support for", "ie 11") { 
+			border: 0; @if normalize-get("options", "explanatory comments") { /* 1 */ } 
+		}
+		padding: 0; @if normalize-get("options", "explanatory comments") { /* 2 */ }
+	}
+
+}

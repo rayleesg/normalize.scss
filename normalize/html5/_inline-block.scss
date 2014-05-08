@@ -1,0 +1,30 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss html5 inline-block
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("parts", "html5", "inline block") {
+
+	@if normalize-get("options", "explanatory comments") { 
+		/**
+		 * 1. Correct `inline-block` display not defined in IE 8/9.
+		 * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+		 */
+	}
+
+	audio,
+	canvas,
+	progress,
+	video {
+		@if normalize-get("options", "legacy support for", "ie 9") { 
+			display: inline-block; @if normalize-get("options", "explanatory comments") { /* 1 */ } 
+		}
+		@if normalize-get("options", "legacy support for", "chrome") or 
+			normalize-get("options", "legacy support for", "safari") or 
+			normalize-get("options", "legacy support for", "opera") { 
+			vertical-align: baseline; @if normalize-get("options", "explanatory comments") { /* 2 */ } 
+		}
+	}
+
+}

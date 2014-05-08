@@ -1,0 +1,29 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss forms button overflow
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("parts", "forms", "button select text transform") {
+
+	@if normalize-get("options", "legacy support for", "ie 11") or 
+    	normalize-get("options", "legacy support for", "firefox") or 
+    	normalize-get("options", "legacy support for", "opera") {
+
+		@if normalize-get("options", "explanatory comments") { 
+			/**
+			 * Address inconsistent `text-transform` inheritance for `button` and `select`.
+			 * All other form control elements do not inherit `text-transform` values.
+			 * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+			 * Correct `select` style inheritance in Firefox.
+			 */
+		}
+
+		button,
+		select {
+			text-transform: none;
+		}
+
+	}
+
+}

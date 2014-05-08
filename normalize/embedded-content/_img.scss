@@ -1,0 +1,23 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss embedded content img
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("parts", "embedded content", "img") {
+
+	@if normalize-get("options", "legacy support for", "ie 10") {
+
+		@if normalize-get("options", "explanatory comments") {
+			/**
+			 * Remove border when inside `a` element in IE 8/9/10.
+			 */
+		}
+
+		img {
+			border: 0;
+		}
+
+	}
+
+}

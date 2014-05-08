@@ -1,0 +1,23 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss forms button overflow
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("parts", "forms", "button overflow") {
+
+	@if normalize-get("options", "legacy support for", "ie 11") {
+
+		@if normalize-get("options", "explanatory comments") { 
+			/**
+			 * Address `overflow` set to `hidden` in IE 8/9/10/11.
+			 */
+		}
+
+		button {
+			overflow: visible;
+		}
+
+	}
+
+}

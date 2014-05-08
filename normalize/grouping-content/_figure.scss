@@ -1,0 +1,24 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// normalize.scss grouping content figure
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+@if normalize-get("parts", "grouping content", "figure") {
+
+	@if normalize-get("options", "legacy support for", "ie 9") or 
+		normalize-get("options", "legacy support for", "safari") {
+
+		@if normalize-get("options", "explanatory comments") {
+			/**
+			 * Address margin not present in IE 8/9 and Safari.
+			 */
+		}
+
+		figure {
+			margin: 1em 40px;
+		}
+
+	}
+
+}
