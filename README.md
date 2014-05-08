@@ -6,11 +6,22 @@ Normalize.scss is a configurable version of [normalize.css](http://necolas.githu
 
 Normalize.scss allows to simply and quickly configure normalise.css. Select the rules, add or remove explanatory comments and IE7 support.
 
+[The project page](http://www.effeiloweb.fr/normalize.scss/)
+
 ## Use normalize.scss
 
-* Download normalize.scss, and copy the files to where you put your CSS files.
+* [Download normalize.scss from the project page](http://www.effeiloweb.fr/normalize.scss/), and copy the files to where you put your CSS files.
 * Run the following command line for Sass generates your css file:
-```ruby
+```
 sass --watch normalize.scss:normalize.css
 ```
 * Open normalize.scss in your text editor and change the configuration variables as needed.
+
+## Configure normalize.scss
+
+For more informations on configuring normalize.scss, you can go to the [online documentation](http://www.effeiloweb.fr/normalize.scss/doc.html).
+
+## Why normalize.scss
+
+To understand why this scss version of normalize.css, you can read the article "[About normalize.scss (FR)](http://blog.effeiloweb.fr/a-propos-de-normalize-css/)".
+
