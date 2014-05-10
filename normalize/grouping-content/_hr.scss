@@ -10,8 +10,8 @@
 
 		@if normalize-get("options", "legacy support for ie7") {
 /**
+ * Correct `block` display not defined for `hr` in IE 7.
  * Address differences between Firefox and other browsers.
- * Known issue: no IE 7 normalization.
  */
 		}
 
@@ -24,6 +24,9 @@
 	}
 
 	hr {
+		@if normalize-get("options", "legacy support for ie7") { 
+			display: block;
+		}
 		-moz-box-sizing: content-box;
 		box-sizing: content-box;
 		height: 0;
