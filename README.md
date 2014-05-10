@@ -1,3 +1,5 @@
+![Normalize.css v1.3.0.1](http://blog.effeiloweb.fr/wp-content/uploads/2014/05/normalize-scss4.jpg)
+
 # normalize.scss v3.0.1.0
 
 [Version FR](https://github.com/Effeilo/normalize.scss/blob/master/README-FR.md)
