@@ -1,0 +1,24 @@
+@mixin has-layout-zoom($fuck-ie7:cssions-get("fuck ie7")) {
+  @if $fuck-ie7 == false {
+    *zoom: 1;
+  }
+}
+
+@mixin has-layout-block($fuck-ie7:cssions-get("fuck ie7")) {
+  @if $fuck-ie7 == false {
+    display: inline-block;
+    display: block;
+  }
+}
+
+@mixin has-layout($has-layout-method:cssions-get("has layout method"),$fuck-ie7:cssions-get("fuck ie7")) {
+  @if $has-layout-method == zoom {
+    @include has-layout-zoom($fuck-ie7);
+  }
+  @else if $has-layout-method == block {
+    @include has-layout-block($fuck-ie7);
+  }
+  @else {
+    //@warn "Unknown has-layout method";
+  }
+}

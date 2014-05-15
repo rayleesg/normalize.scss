@@ -1,0 +1,37 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// CSSIONS FUNCTIONS
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// cssions settings manipulation 
+//////////////////////////////////////////////////////////////
+
+@function cssions-map-get($map, $keys...) {
+
+	$length: length($keys);
+	$get: map-get($map, nth($keys, 1));
+
+	@if $length == 1 {
+		$keys: nth($keys, 1);
+	}
+
+	@if $length > 1 {
+		@for $i from 2 through $length {
+			@if $get type-of($get) == 'map' {
+				$get: map-get($get, nth($keys, $i));
+			}
+		}
+	}
+
+	@return $get;
+
+}
+
+
+// Get cssions settings
+//////////////////////////////////////////////////////////////
+
+@function cssions-get($settings...) {
+    @return cssions-map-get($cssions-settings, $settings...);
+}

@@ -1,0 +1,54 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// CSSIONS CONFIGURATION
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// cssions Settings
+//////////////////////////////////////////////////////////////
+
+$cssions-settings: (
+	"ie support": (
+		"fuck ie7":					false,	// true;false;
+		"has layout method":		zoom,	// block;zoom;
+	),
+	"explanations": (
+		"explanations comments":	true,	// true;false;
+		"explanations lang":		en,		// en;fr;
+	),
+);
+
+
+// cssions Core
+//////////////////////////////////////////////////////////////
+
+// **
+// * Don't touch.
+// */
+
+@import "cssions/core/functions";
+@import "cssions/core/mixins";
+
+
+// cssions Modules
+//////////////////////////////////////////////////////////////
+
+// **
+// * Add module.
+// */
+
+//@import "cssions-reset";
+@import "cssions-typo";
+//@import "cssions-clearfix";
+
+
+// cssions init
+//////////////////////////////////////////////////////////////
+
+// **
+// * Add init module.
+// */
+
+//@import "modules/cssions-reset/cssions-reset-init";
+@import "modules/cssions-typo/cssions-typo-init";
+//@import "modules/cssions-clearfix/cssions-clearfix-init";

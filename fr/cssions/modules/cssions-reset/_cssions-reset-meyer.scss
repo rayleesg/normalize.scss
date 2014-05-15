@@ -1,0 +1,216 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// CSSIONS RESET METHOD : ERIC MEYER RESET
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// cssions meyer variables
+//////////////////////////////////////////////////////////////
+
+$meyer-base-tags: html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video;
+$meyer-html5-block-tags: article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section; 
+
+$base-tags:if(reset-get("base tags") == default,$meyer-base-tags,reset-get("base tags"));
+$html5-block-tags:if(reset-get("html5 block tag") == default,$meyer-html5-block-tags,reset-get("html5 block tag"));
+
+
+// cssions meyer initialisation
+//////////////////////////////////////////////////////////////
+
+@if reset-get("reset") == meyer {
+  
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+     v2.0 | 20110126
+     License: none (public domain)
+  */
+
+  @if meyer-get("base", "margin") or 
+      meyer-get("base", "padding") or 
+      meyer-get("base", "border") or 
+      meyer-get("base", "font size") or 
+      meyer-get("base", "font") or 
+      meyer-get("base", "vertical align") {
+
+    @if cssions-get("explanations", "explanations comments") { 
+
+      @if cssions-get("explanations", "explanations lang") == fr {
+        /**
+         * 1. On supprime les marges externes par défaut.
+         * 2. On supprime les marges internes par défaut.
+         * 3. On supprime les bordures indésirables.
+         * 4. On définit une valeur héritable et initialise une taille par défaut pour la page.
+         * 5. Tous les éléments utilisent la même police de caractères sans casser l'héritage.
+         * 6. On harmonise le rythme vertical.
+         */ 
+      }
+
+      @else { 
+        /**
+         * 1. Remove default margin.
+         * 2. Remove default padding.
+         * 3. Remove default border.
+         * 4. Obtain a heritable value and have a global default font size.
+         * 5. All elements use the same font face without breaking inheritance.
+         * 6. Harmonizes vertical align.
+         */
+      }
+
+    }
+
+  }
+
+  #{$base-tags} {
+    @if meyer-get("base", "margin") { margin: 0; @if cssions-get("explanations", "explanations comments") { /* 1 */ } }
+    @if meyer-get("base", "padding") { padding: 0; @if cssions-get("explanations", "explanations comments") { /* 2 */ } }
+    @if meyer-get("base", "border") { border: 0; @if cssions-get("explanations", "explanations comments") { /* 3 */ } }
+    @if meyer-get("base", "font size") { font-size: 100%; @if cssions-get("explanations", "explanations comments") { /* 4 */ } }
+    @if meyer-get("base", "font") { font: inherit; @if cssions-get("explanations", "explanations comments") { /* 5 */ } }
+    @if meyer-get("base", "vertical align") { vertical-align: baseline; @if cssions-get("explanations", "explanations comments") { /* 6 */ } }
+  }
+
+  @if meyer-get("parts", "html5 display block") { 
+
+    @if cssions-get("explanations", "explanations comments") { 
+
+      @if cssions-get("explanations", "explanations lang") == fr {
+        /**
+         * Les éléments HTML5 ne sont pas définis en 'block' dans IE 8/9.
+         */
+      }
+
+      @else { 
+        /**
+         * Correct `block` display not defined for any HTML5 element in IE 8/9.
+         */
+      }
+
+    }
+
+    #{$html5-block-tags} {
+      display: block;
+    }
+
+  }
+
+  @if meyer-get("parts", "body line height") { 
+
+    @if cssions-get("explanations", "explanations comments") { 
+
+      @if cssions-get("explanations", "explanations lang") == fr {
+        /**
+         * La propriété line-height peut accepter des valeurs numériques sans unité.
+         * La valeur fonctionne comme facteur multiplicateur.
+         */
+      }
+
+      @else { 
+        /**
+         * The property line-height can accept unitless number values.
+         * Value functions as a multiplier.
+         */
+      }
+
+    }
+
+    body {
+      line-height: 1;
+    }
+
+  }
+
+  @if meyer-get("parts", "lists") { 
+
+    @if cssions-get("explanations", "explanations comments") { 
+
+      @if cssions-get("explanations", "explanations lang") == fr {
+        /**
+         * On supprime les styles par défaut des listes.
+         */
+      }
+
+      @else { 
+        /**
+         * Remove default list style.
+         */
+      }
+
+    }
+
+    ol, ul {
+      list-style: none;
+    }
+
+  }
+
+  @if meyer-get("parts", "quotations") { 
+
+
+    @if cssions-get("explanations", "explanations comments") { 
+
+      @if cssions-get("explanations", "explanations lang") == fr {
+        /**
+         * 1. On supprime les guillemets d'ouverture et de fermeture.
+         * 2. On supprime le contenu eventuellemet généré avant ou après.
+         */
+      }
+
+      @else { 
+        /**
+         * 1. Remove the opening and closing quotes.
+         * 2. Preventively remove content "possibly" generated before or after.
+         */
+      }
+
+    }
+
+    blockquote, q {
+      quotes: none; @if cssions-get("explanations", "explanations comments") { /* 1 */ }
+    }
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: ''; @if cssions-get("explanations", "explanations comments") { /* 2 */ }
+      content: none; @if cssions-get("explanations", "explanations comments") { /* 2 */ }
+    }
+
+  }
+
+  @if meyer-get("parts", "tables") { 
+
+    @if cssions-get("explanations", "explanations comments") { 
+
+      @if cssions-get("explanations", "explanations lang") == fr {
+        /**
+         * On supprime la majorité des espacements entre les cellules des tableaux.
+         */
+      }
+
+      @else { 
+        /**
+         * Remove most spacing between table cells.
+         */
+      }
+
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+  }
+
+}

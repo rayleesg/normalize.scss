@@ -1,0 +1,304 @@
+@if reset-get("reset") == html5doctor {
+
+    /* 
+    html5doctor.com Reset Stylesheet
+    v1.6.1
+    Last Updated: 2010-09-17
+    Author: Richard Clark - http://richclarkdesign.com 
+    Twitter: @rich_clark
+    */
+
+    @if html5doctor-get("base", "margin") or 
+        html5doctor-get("base", "padding") or 
+        html5doctor-get("base", "border") or 
+        html5doctor-get("base", "outline") or 
+        html5doctor-get("base", "font size") or 
+        html5doctor-get("base", "vertical align") or 
+        html5doctor-get("base", "background") {
+
+        @if cssions-get("explanations", "explanations comments") { 
+
+            @if cssions-get("explanations", "explanations lang") == fr {
+                /**
+                 * 1. On supprime les marges externes par défaut.
+                 * 2. On supprime les marges internes par défaut.
+                 * 3. On supprime les bordures indésirables.
+                 * 4. .
+                 * 5. On définit une valeur héritable et initialise une taille par défaut pour la page.
+                 * 6. On harmonise le rythme vertical.
+                 * 7. .
+                 */ 
+            }
+
+            @else { 
+                /**
+                 * 1. Remove default margin.
+                 * 2. Remove default padding.
+                 * 3. Remove default border.
+                 * 4. .
+                 * 5. Obtain a heritable value and have a global default font size.
+                 * 6. Harmonizes vertical align.
+                 * 7. .
+                 */
+            }
+
+        }
+
+    }
+
+    html, body, div, span, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    abbr, address, cite, code,
+    del, dfn, em, img, ins, kbd, q, samp,
+    small, strong, sub, sup, var,
+    b, i,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section, summary,
+    time, mark, audio, video {
+        @if html5doctor-get("base", "margin") { margin:0; @if cssions-get("explanations", "explanations comments") { /* 1 */ } }
+        @if html5doctor-get("base", "padding") { padding:0; @if cssions-get("explanations", "explanations comments") { /* 2 */ } }
+        @if html5doctor-get("base", "border") { border:0; @if cssions-get("explanations", "explanations comments") { /* 3 */ } }
+        @if html5doctor-get("base", "outline") { outline:0; @if cssions-get("explanations", "explanations comments") { /* 4 */ } }
+        @if html5doctor-get("base", "font size") { font-size:100%; @if cssions-get("explanations", "explanations comments") { /* 5 */ } }
+        @if html5doctor-get("base", "vertical align") { vertical-align:baseline; @if cssions-get("explanations", "explanations comments") { /* 6 */ } }
+        @if html5doctor-get("base", "background") { background:transparent; @if cssions-get("explanations", "explanations comments") { /* 7 */ } }
+    }
+
+    @if html5doctor-get("parts", "body line height") { 
+
+        @if cssions-get("explanations", "explanations comments") { 
+
+            @if cssions-get("explanations", "explanations lang") == fr {
+                /**
+                * La propriété line-height peut accepter des valeurs numériques sans unité.
+                * La valeur fonctionne comme facteur multiplicateur.
+                */
+            }
+
+            @else { 
+                /**
+                * The property line-height can accept unitless number values.
+                * Value functions as a multiplier.
+                */
+            }
+
+        }
+
+        body {
+            line-height: 1;
+        }
+
+    }
+
+    @if html5doctor-get("parts", "html5 display block") { 
+
+        @if cssions-get("explanations", "explanations comments") { 
+
+            @if cssions-get("explanations", "explanations lang") == fr {
+                /**
+                * Les éléments HTML5 ne sont pas définis en 'block' dans IE 8/9.
+                */
+            }
+
+            @else { 
+                /**
+                * Correct `block` display not defined for any HTML5 element in IE 8/9.
+                */
+            }
+
+        }
+
+        article,aside,details,figcaption,figure,
+        footer,header,hgroup,menu,nav,section { 
+            display:block;
+        }
+
+    }
+
+    @if html5doctor-get("parts", "nav lists") { 
+
+        @if cssions-get("explanations", "explanations comments") { 
+
+            @if cssions-get("explanations", "explanations lang") == fr {
+                /**
+                * On supprime les styles par défaut des listes de l'élément 'nav'.
+                */
+            }
+
+            @else { 
+                /**
+                * Remove default list style of 'nav' element.
+                */
+            }
+
+        }
+
+        nav ul {
+            list-style:none;
+        }
+
+    }
+
+    @if html5doctor-get("parts", "quotations") { 
+
+        @if cssions-get("explanations", "explanations comments") { 
+
+            @if cssions-get("explanations", "explanations lang") == fr {
+                /**
+                * 1. On supprime les guillemets d'ouverture et de fermeture.
+                * 2. On supprime le contenu eventuellemet généré avant ou après.
+                */
+            }
+
+             @else { 
+                /**
+                * 1. Remove the opening and closing quotes.
+                * 2. Preventively remove content "possibly" generated before or after.
+                */
+            }
+
+        }
+
+        blockquote, q {
+            quotes: none; @if cssions-get("explanations", "explanations comments") { /* 1 */ }
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: ''; @if cssions-get("explanations", "explanations comments") { /* 2 */ }
+            content: none; @if cssions-get("explanations", "explanations comments") { /* 2 */ }
+        }
+
+    }
+
+    @if html5doctor-get("parts", "links") { 
+
+        a {
+            margin:0;
+            padding:0;
+            font-size:100%;
+            vertical-align:baseline;
+            background:transparent;
+        }
+
+    }
+
+    @if html5doctor-get("parts", "ins") { 
+
+        ins {
+            background-color:#ff9;
+            color:#000;
+            text-decoration:none;
+        }
+
+    }
+
+    @if html5doctor-get("parts", "mark") { 
+
+        @if cssions-get("explanations", "explanations comments") { 
+
+            @if cssions-get("explanations", "explanations lang") == fr {
+                /**
+                 * On applique les styles qui ne sont pas présent sur IE 8/9.
+                 */
+            }
+
+             @else { 
+                /**
+                 * 1. Address styling not present in IE 8/9.
+                 */
+            }
+
+        }
+
+        mark {
+            background-color:#ff9;
+            color:#000; 
+            font-style:italic;
+            font-weight:bold;
+        }
+    }
+
+    @if html5doctor-get("parts", "del") { 
+
+        del {
+            text-decoration: line-through;
+        }
+
+    }
+
+    @if html5doctor-get("parts", "abbr dfn") { 
+
+        @if cssions-get("explanations", "explanations comments") { 
+
+            @if cssions-get("explanations", "explanations lang") == fr {
+                /**
+                 * On applique les styles qui ne sont pas présent sur IE 8/9/10/11, Safari et Chrome.
+                 */
+            }
+
+             @else { 
+                /**
+                 * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+                 */
+            }
+
+        }
+
+        abbr[title], dfn[title] {
+            border-bottom:1px dotted;
+            cursor:help;
+        }
+
+    }
+
+    @if html5doctor-get("parts", "tables") { 
+
+        @if cssions-get("explanations", "explanations comments") { 
+
+            @if cssions-get("explanations", "explanations lang") == fr {
+                /**
+                * On supprime la majorité des espacements entre les cellules des tableaux.
+                */
+            }
+
+            @else { 
+                /**
+                * Remove most spacing between table cells.
+                */
+            }
+
+        }
+
+        table {
+            border-collapse:collapse;
+            border-spacing:0;
+        }
+
+    }
+
+    @if html5doctor-get("parts", "hr") { 
+
+        hr {
+            display:block;
+            height:1px;
+            border:0;   
+            border-top:1px solid #cccccc;
+            margin:1em 0;
+            padding:0;
+        }
+
+    }
+
+    @if html5doctor-get("parts", "input select") { 
+
+        input, select {
+            vertical-align:middle;
+        }
+
+    }
+
+}

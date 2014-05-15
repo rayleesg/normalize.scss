@@ -1,0 +1,79 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// CSSIONS TYPO : DROP CAP
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// http://openweb.eu.org/articles/la-gestion-de-la-cesure-en-css
+//////////////////////////////////////////////////////////////
+
+@if typo-get("options", "drop cap")  {
+
+  /* Typo hyphenation
+     ========================================================================== */
+
+  @if cssions-get("explanations comments") { 
+
+    @if cssions-get("explanations lang") == fr {
+
+      /**
+       * 1. Chrome ne possède pas de dictionnaire de césures, la propriété 'hyphens' 
+       */
+    }
+
+    @else { 
+      /**
+       * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
+       */
+    }
+
+  }
+
+  .dropcap {
+    &:first-of-type {
+      &:first-letter {
+        float: left;
+        @include font-size(typo-get("vertical rythm", "size") * typo-get("drop cap", "number line"),typo-get("base", "default font size"));
+        font-weight: 700;
+        margin-right: 0.75rem;
+        @include margin(top,0.4,typo-get("vertical rythm", "size") * typo-get("drop cap", "number line"));
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .no-dropcap {
+    &:first-of-type {
+      &:first-letter {
+      float:none;
+      font-size:inherit;
+      font-weight:inherit;
+      line-height:inherit;
+      margin:0;
+      text-transform:none;
+      }
+    }
+  }
+
+  p:first-of-type {
+    text-indent:0;
+  }
+
+
+  p {
+    text-indent:2em;
+    @include margin(top,1,18);
+  }
+
+
+ p {
+    @extend .dropcap;
+  }
+
+  section blockquote {
+    p { 
+      @extend .no-dropcap; 
+    }
+  }
+
+}

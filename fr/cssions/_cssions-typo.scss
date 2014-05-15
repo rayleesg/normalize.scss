@@ -1,0 +1,108 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// CSSIONS TYPO CONFIGURATION
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// cssions Typo Settings
+//////////////////////////////////////////////////////////////
+
+$cssions-fontface-settings: (
+  "Roboto Slab": (
+    "font folder name": "robotoslab-light-webfont",
+    "font class name": RobotoSlab,
+    "font weight": normal,
+    "font style": normal,
+    "eot": true,
+    "woff": true,
+    "ttf": true,
+    "svg": true,
+    "init tags": "body",
+  ),
+  "Lato": (
+    "font folder name": "lato-bla-webfont",
+    "font class name": Lato,
+    "font weight": normal,
+    "font style": normal,
+    "eot": true,
+    "woff": true,
+    "ttf": true,
+    "svg": true,
+    "init tags": "h1,h2",
+  ),
+);
+
+$cssions-typo-settings: (
+  "options": (
+    "vertical rythm":false,  
+    "hyphenation":false, 
+    "headers":false, 
+    "alternate font size":true, 
+    "drop cap":false,
+    "placeholder":true,
+  ),
+  "base": (
+    "default font size":20,
+    "unit value":rem,
+    "unit value fallback":px,
+  ),
+  "vertical rythm": (
+    "method":ratio,//false;false;ratio
+    "size":24,
+    "ratio":1.5,
+  ),
+  "hyphenation": (
+    "no hyphens class":false
+  ),
+  "headers": (
+    "like class":false,
+    "h1": (
+      "font size":38,
+      "margin top":0,
+      "margin bottom":0
+    ),
+    "h2": (
+      "font size":34,
+      "margin top":0,
+      "margin bottom":0
+    ),
+    "h3": (
+      "font size":18,
+      "margin top":0,
+      "margin bottom":0
+    ),
+    "h4": (
+      "font size":20,
+      "margin top":0,
+      "margin bottom":0
+    ),
+    "h5": (
+      "font size":18,
+      "margin top":0,
+      "margin bottom":0
+    ),
+    "h6": (
+      "font size":16,
+      "margin top":0,
+      "margin bottom":0
+    ),
+    "avoid top margin first element":false,
+  ),
+  "alternate font size":(
+      "smallest":-6,
+      "smaller":-4,
+      "small":-2,
+      "big":+2,
+      "bigger":+4,
+      "biggest":+6
+  ),
+  "drop cap":(
+      "number line":1.8,
+  )
+);
+
+
+// cssions Typo Core
+//////////////////////////////////////////////////////////////
+
+@import "cssions/modules/cssions-typo/cssions-typo-core";
