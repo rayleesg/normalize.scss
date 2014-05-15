@@ -6,11 +6,11 @@ Normalize.scss est une version configurable de [normalize.css](http://necolas.gi
 
 Normalize.scss permet de configurer simplement et rapidement normalise.css. Choisissez les règles, ajoutez ou supprimez les commentaires explicatifs et le support d'IE7.
 
-[le site du projet](http://www.effeiloweb.fr/normalize.scss/)
+[le site du projet](http://effeilo.github.io/normalize.scss/)
 
 ## Uiliser normalize.scss
 
-* [Téléchargez normalize.scss depuis le site du projet](http://www.effeiloweb.fr/normalize.scss/), puis copiez les fichiers à l'endroit où vous placez vos fichiers CSS. 
+* [Téléchargez normalize.scss depuis le site du projet](http://effeilo.github.io/normalize.scss/), puis copiez les fichiers à l'endroit où vous placez vos fichiers CSS. 
 * Lancez la ligne de commande suivante pour que Sass génère votre fichier css : 
 ```
 sass --watch normalize.scss:normalize.css
@@ -19,7 +19,7 @@ sass --watch normalize.scss:normalize.css
 
 ## Configurer normalize.scss
 
-Pour plus d'informations sur la configuration de normalize.scss, vous pouvez vous rendre sur la [documentation en ligne](http://www.effeiloweb.fr/normalize.scss/doc.html).
+Pour plus d'informations sur la configuration de normalize.scss, vous pouvez vous rendre sur la [documentation en ligne](http://effeilo.github.io/normalize.scss/doc.html).
 
 ## Why normalize.scss
 
