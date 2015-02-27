@@ -1,4 +1,4 @@
-# normalize.scss v3.0.1.0
+# normalize.scss v3.0.2.0
 
 [Version EN](https://github.com/Effeilo/normalize.scss/blob/master/README.md)
 
