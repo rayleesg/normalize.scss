@@ -44,8 +44,8 @@
 // base
 //////////////////////////////////////////////////////////////
 
-@import "normalize/base/html";
-@import "normalize/base/margin";
+@import "base/html";
+@import "base/margin";
 
 
 // html5
@@ -61,10 +61,10 @@
 
 }
 
-@import "normalize/html5/block";
-@import "normalize/html5/inline-block";
-@import "normalize/html5/audio";
-@import "normalize/html5/hidden";
+@import "html5/block";
+@import "html5/inline-block";
+@import "html5/audio";
+@import "html5/hidden";
 
 
 // links
@@ -78,8 +78,8 @@
 
 }
 
-@import "normalize/links/background";
-@import "normalize/links/outline";
+@import "links/background";
+@import "links/outline";
 
 
 // text level semantics
@@ -98,15 +98,15 @@
 
 }
 
-@import "normalize/text-level/abbr";
-@import "normalize/text-level/bold";
-@import "normalize/text-level/dfn";
-@import "normalize/text-level/headers";
-@import "normalize/text-level/mark";
-@import "normalize/text-level/p";
-@import "normalize/text-level/q";
-@import "normalize/text-level/small";
-@import "normalize/text-level/sub-sup";
+@import "text-level/abbr";
+@import "text-level/bold";
+@import "text-level/dfn";
+@import "text-level/headers";
+@import "text-level/mark";
+@import "text-level/p";
+@import "text-level/q";
+@import "text-level/small";
+@import "text-level/sub-sup";
 
 
 // Lists
@@ -119,9 +119,9 @@
 
 }
 
-@import "normalize/lists/margin";
-@import "normalize/lists/padding";
-@import "normalize/lists/list-style";
+@import "lists/margin";
+@import "lists/padding";
+@import "lists/list-style";
 
 // text level embedded content
 //////////////////////////////////////////////////////////////
@@ -134,8 +134,8 @@
 
 }
 
-@import "normalize/embedded-content/img";
-@import "normalize/embedded-content/svg";
+@import "embedded-content/img";
+@import "embedded-content/svg";
 
 
 // normalize.scss grouping content
@@ -151,10 +151,10 @@
 
 }
 
-@import "normalize/grouping-content/figure";
-@import "normalize/grouping-content/hr";
-@import "normalize/grouping-content/pre";
-@import "normalize/grouping-content/monospace";
+@import "grouping-content/figure";
+@import "grouping-content/hr";
+@import "grouping-content/pre";
+@import "grouping-content/monospace";
 
 
 // normalize.scss forms
@@ -187,21 +187,21 @@
 
 }
 
-@import "normalize/forms/form";
-@import "normalize/forms/form-elements-reset";
-@import "normalize/forms/button-overflow";
-@import "normalize/forms/button-select-text-transform";
-@import "normalize/forms/button-appearance";
-@import "normalize/forms/button-input-disabled";
-@import "normalize/forms/button-input-focus-inner";
-@import "normalize/forms/input-line-height";
-@import "normalize/forms/input-checkbox-radio";
-@import "normalize/forms/input-number";
-@import "normalize/forms/input-search";
-@import "normalize/forms/fieldset";
-@import "normalize/forms/legend";
-@import "normalize/forms/textarea";
-@import "normalize/forms/optgroup";
+@import "forms/form";
+@import "forms/form-elements-reset";
+@import "forms/button-overflow";
+@import "forms/button-select-text-transform";
+@import "forms/button-appearance";
+@import "forms/button-input-disabled";
+@import "forms/button-input-focus-inner";
+@import "forms/input-line-height";
+@import "forms/input-checkbox-radio";
+@import "forms/input-number";
+@import "forms/input-search";
+@import "forms/fieldset";
+@import "forms/legend";
+@import "forms/textarea";
+@import "forms/optgroup";
 
 
 // normalize.scss tables
@@ -215,5 +215,5 @@
 
 }
 
-@import "normalize/tables/table";
-@import "normalize/tables/td-th";
+@import "tables/table";
+@import "tables/td-th";

@@ -36,6 +36,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -80,7 +81,7 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background: transparent;
+  background-color: transparent;
 }
 
 /**
@@ -394,3 +395,5 @@ td,
 th {
   padding: 0;
 }
+
+/*# sourceMappingURL=normalize.css.map */
