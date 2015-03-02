@@ -2,7 +2,7 @@
 
 # normalize.scss v3.0.2.0
 
-[Version EN](https://github.com/Effeilo/normalize.scss/blob/master/README.md)
+[EN Version](https://github.com/Effeilo/normalize.scss)
 
 Normalize.scss est une version configurable de [normalize.css](http://necolas.github.io/normalize.css/), utilisant Sass. 
 
