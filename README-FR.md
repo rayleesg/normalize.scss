@@ -1,3 +1,5 @@
+![Normalize.css v3.0.2.0](http://effeilo.github.io/normalize.scss/images/normalize.scss-en.jpg)
+
 # normalize.scss v3.0.2.0
 
 [Version EN](https://github.com/Effeilo/normalize.scss/blob/master/README.md)
