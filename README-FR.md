@@ -19,7 +19,7 @@ sass --watch normalize.scss:normalize.css
 
 ## Configurer normalize.scss
 
-Pour plus d'informations sur la configuration de normalize.scss, vous pouvez vous rendre sur la [documentation en ligne](http://effeilo.github.io/normalize.scss/doc.html).
+Pour plus d'informations sur la configuration de normalize.scss, vous pouvez vous rendre sur la [documentation en ligne](http://effeilo.github.io/normalize.scss/fr/documentation.html).
 
 ## Why normalize.scss
 
