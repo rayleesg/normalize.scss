@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Documentation of normalize.scss (A configurable version of normalize.css, using Sass).</title>
+ 		<meta name="description" content="normalize.scss is a configurable version of normalize.css, using Sass. Normalize.scss allows to simply and quickly configure normalise.css. Select the rules, add or remove explanatory comments and IE7 support.">
+		
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body id="documentation">
+
+    	<a href="fr/documentation.html" id="lang" title="Accéder au site en version française">FR</a>
+
+    	<header id="header">
+    		<a id="btn-nav" href=""><i class="fa fa-bars"></i></a>
+    		<h1><a href="./">normalize.scss</a></h1>
+				<h2>&nbsp;- Documentation</h2>
+		</header>
+
+		<section>
+			<nav id="nav">
+				<a id="btn-close-nav" href=""><i class="fa fa-times"></i></a>
+				<h3>Summary</h3>
+					<ul>
+						<li><a href="#doc-how" class="nav-btn active"><i class="fa fa-floppy-o"></i>How to use</a></li>
+						<li><a href="#doc-config" class="subnav-btn"><i class="fa fa-cog"></i>Configure</a>
+							<ul>
+								<li><a href="#doc-options">Options</a></li>
+								<li><a href="#doc-parts-base">Parts: base</a></li>
+								<li><a href="#doc-parts-html5">Parts: html5</a></li>
+								<li><a href="#doc-parts-links">Parts: links</a></li>
+								<li><a href="#doc-parts-text-level">Parts: text level semantics</a></li>
+								<li><a href="#doc-parts-embed">Parts: embedded content</a></li>
+								<li><a href="#doc-parts-group">Parts: grouping content</a></li>
+								<li><a href="#doc-parts-forms">Parts: forms</a></li>
+								<li><a href="#doc-parts-tables">Parts: tables</a></li>
+							</ul>
+						</li>
+						<li><a href="#doc-ie7" class="nav-btn"><i class="fa fa-windows"></i>IE7 support</a>
+					</ul>
+			</nav>
+			<div id="doc-content">
+
+				<section id="doc-how">
+					<h3>How to use normalize.scss</h3>
+						<ul>
+							<li>
+								<a href="http://www.effeiloweb.fr/normalize.scss/normalize.scss-v3.0.1.0.rar">Download normalize.scss</a>, and copy the files to where you put your CSS files.
+							</li>
+							<li>
+								Run the following command line for Sass generates your css file: 
+								<pre><code>sass --watch normalize.scss:normalize.css</code></pre>
+							</li>
+							<li>
+								Open normalize.scss in your text editor and change the configuration variables as needed.
+							</li>
+						</ul>
+				</section>
+				<section id="doc-config">
+					<h3>Configure normalize.scss</h3>
+						<p>
+							The configuration happens in the normalize.scss file. It is divided into two main parts: options and parts.
+						</p>
+						<pre class="scss"><code>$normalize-settings: (
+
+	"options": (
+		...
+	),
+
+	"parts": (
+		...
+	)
+
+);</code></pre>
+					<section id="doc-options">
+						<h4>Options</h4>
+							<pre class="scss"><code>"options": (
+	"explanatory comments":true,
+	"legacy support for ie7":false
+),</code></pre>
+							
+							<h5>explanatory comments</h5>
+								<ul>
+									<li><code>true</code>: add explanatory comments to normalize.css</li>
+									<li><code>false</code>: remove explanatory comments to normalize.css</li>
+								</ul>
+
+							<h5>legacy support for ie7</h5>
+								<ul>
+									<li><code>true</code>: add support for IE7</li>
+									<li><code>false</code>: remove support for IE7</li>
+								</ul>
+								<p>
+									For more information on IE ​​7 support , refer to the part "<a href="#doc-ie7">IE ​​7 support</a>".
+								</p>
+					</section>
+
+					<section id="doc-parts-base">
+						<h4>Parts: base</h4>
+							<pre class="scss"><code>"base": (
+	"html":true,
+	"reset margin":"body"
+),</code></pre>
+							
+							<h5>html</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code>/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ * user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}</code></pre>
+							<h5>reset margin</h5>
+								<ul>
+									<li><code>"list of tags, in quotes, separated by commas"</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code>/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}</code></pre>
+					</section>
+
+					<section id="doc-parts-html5">
+						<h4>Parts: html5</h4>
+							<pre class="scss"><code>"html5": (
+	"block":true,
+	"inline block":true,
+	"audio":true,
+	"hidden":true
+),</code></pre>
+							
+							<h5>block</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}</code></pre>
+							<h5>inline block</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}</code></pre>
+							<h5>audio</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}</code></pre>
+							<h5>hidden</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox &lt; 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}</code></pre>
+					</section>
+
+					<section id="doc-parts-links">
+						<h4>Parts: links</h4>
+							<pre class="scss"><code>"links": (
+	"background":true,
+	"outline":true
+),</code></pre>
+							
+							<h5>background</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background: transparent;
+}</code></pre>
+							<h5>outline</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}</code></pre>
+					</section>
+
+					<section id="doc-parts-text-level">
+						<h4>Parts: text level semantics</h4>
+							<pre class="scss"><code>"text level semantics": (
+	"abbr":true,
+	"bold":true,
+	"dfn":true,
+	"headers":true,
+	"mark":true,
+	"small":true,
+	"sub sup":true
+),</code></pre>
+							
+							<h5>abbr</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}</code></pre>
+							<h5>bold</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}</code></pre>
+							<h5>dfn</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}</code></pre>
+							<h5>headers</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}</code></pre>
+							<h5>mark</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}</code></pre>
+							<h5>small</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}</code></pre>
+							<h5>sub sup</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}</code></pre>
+
+					</section>
+
+					<section id="doc-parts-embed">
+						<h4>Parts: embedded content</h4>
+							<pre class="scss"><code>"embedded content": (
+	"img":true,
+	"svg":true
+)</code></pre>
+							
+							<h5>img</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}</code></pre>
+							<h5>svg</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}</code></pre>
+					</section>
+
+					<section id="doc-parts-group">
+						<h4>Parts: grouping content</h4>
+							<pre class="scss"><code>"grouping content": (
+	"figure":true,
+	"hr":true,
+	"pre":true,
+	"monospace":true
+),</code></pre>
+							
+							<h5>figure</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}</code></pre>
+							<h5>hr</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}</code></pre>
+							<h5>pre</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}</code></pre>
+							<h5>monospace</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}</code></pre>
+					</section>
+
+					<section id="doc-parts-forms">
+						<h4>Parts: forms</h4>
+							<pre class="scss"><code>"forms": (
+	"form elements reset":true,
+	"button overflow":true,
+	"button select text transform":true,
+	"button appearance":true,
+	"button input disabled":true,
+	"button input focus inner":true,
+	"input line height":true,
+	"input checkbox radio":true,
+	"input number":true,
+	"input search":true,
+	"fieldset":true,
+	"legend":true,
+	"textarea":true, 
+	"optgroup":true
+),</code></pre>
+							
+							<h5>form elements reset</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * 1. Correct color not being inherited.
+ * Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}</code></pre>
+							<h5>button overflow</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}</code></pre>
+							<h5>button select text transform</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}</code></pre>
+							<h5>button appearance</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ * and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ * `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}</code></pre>
+							<h5>button input disabled</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}</code></pre>
+							<h5>button input focus inner</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}</code></pre>
+							<h5>input line height</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}</code></pre>
+							<h5>input checkbox radio</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}</code></pre>
+							<h5>input number</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}</code></pre>
+							<h5>input search</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ * (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}</code></pre>
+							<h5>fieldset</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}</code></pre>
+							<h5>legend</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}</code></pre>
+							<h5>textarea</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre><code class="css">/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}</code></pre>
+							<h5>optgroup</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}</code></pre>
+
+					</section>
+
+					<section id="doc-parts-tables">
+						<h4>Parts: tables</h4>
+							<pre class="scss"><code>"tables": (
+	"table":true,
+	"td th":true
+)</code></pre>
+							
+							<h5>table</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}</code></pre>
+							<h5>td th</h5>
+								<ul>
+									<li><code>true</code>: add the following code</li>
+									<li><code>false</code>: remove the following code</li>
+								</ul>
+<pre class="css"><code>td,
+th {
+  padding: 0;
+}</code></pre>
+					</section>
+
+				</section>
+
+<section id="doc-ie7">
+					<h3>IE 7 support</h3>
+						<p>Normalize.css no longer supports older browsers such as IE 6, IE 7, or Safari 4. The branch that supported these browsers is no longer developed (<a href="https://github.com/necolas/normalize.css/tree/v1" target="bank">Normalize.css v1</a>).</p>
+						<p>In the workplace, you can afford to say no to IE 6, but IE 7 still present for some companies. That is why normalize.scss offers support for this browser.</p>
+						<p>I maintain <a href="https://github.com/Effeilo/normalize.css-v1" target="bank">an updated version of normalize.css supporting IE7</a>, the option of IE7 support normalize.scss is based on.</p>
+
+						<section id="doc-ie7-true">
+							<h5>Legacy support for IE 7 : true;</h5>
+								<p>Activation of IE 7 support adds a lot of rules and hacks:</p>
+
+									<h5>Base</h5>
+										<ul>
+											<li>Correct text resizing oddly in IE 7 when body <code>font-size</code> is set using <code>em</code> units.</li>
+										</ul>
+										<pre class="css"><code>html {
+    font-family: sans-serif; /* 1 */
+    font-size: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 3 */
+    -webkit-text-size-adjust: 100%; /* 3 */
+}</code></pre>
+
+									<h5>HTML5 display definitions</h5>
+										<ul>
+											<li>Haslayout hack for <code>display</code> in <code>inline-block</code>.</li>
+										</ul>
+										<pre class="css"><code>audio,
+canvas,
+progress,
+video {
+    display: inline-block; /* 1 */
+    *display: inline; /* 2 */
+    *zoom: 1; /* 2 */
+    vertical-align: baseline; /* 3 */
+}</code></pre>
+
+									<h5>Text-level semantics</h5>
+										<ul>
+											<li>For the <code>headers</code>, address font sizes and margins set differently in IE 7.</li>
+										</ul>
+										<pre class="css"><code>h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.67em;
+    margin: 2.33em 0;
+}</code></pre>
+										<ul>
+											<li>For <code>p</code>, address margins set differently in IE 7.</li>
+										</ul>
+										<pre class="css"><code>p {
+    margin: 1em 0;
+}</code></pre>
+										<ul>
+											<li>For <code>q</code><li>, Address CSS <code>quotes</code> not supported in IE 7.</li>
+										</ul>
+										<pre class="css"><code>q {
+    quotes: none;
+}</code></pre>
+
+									<h5>Lists</h5>
+										<p>"Lists" part has been removed from normalize.css simultaneously stop supporting older browsers.</p>
+										<ul>
+											<li>Address margins and paddings set differently in IE 7.</li>
+											<li>Correct list images handled incorrectly in IE 7.</li>
+										</ul>
+										<pre class="css"><code>/* Lists
+   ======================================================= */
+
+/**
+* Address margins set differently in IE 7.
+*/
+
+dl,
+ol,
+ul {
+    margin: 1em 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+/**
+* Address paddings set differently in IE 7.
+*/
+
+ol,
+ul {
+    padding: 0 0 0 40px;
+}
+
+/**
+* Correct list images handled incorrectly in IE 7.
+*/
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}</code></pre>
+
+									<h5>Embedded content</h5>
+										<ul>
+											<li>Improve image quality when scaled in IE 7.</li>
+										</ul>
+										<pre class="css"><code>img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}</code></pre>
+
+									<h5>Grouping content</h5>
+										<ul>
+											<li>Correct <code>display</code> set differently for <code>hr</code> in IE 7.</li>
+										</ul>
+										<pre class="css"><code>hr {
+	display: block;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+}</code></pre>
+										<ul>
+											<li>For <code>pre</code>, address margins set differently in IE 7.</li>
+										</ul>
+										<pre class="css"><code>pre {
+    margin: 1em 0; /* 1 */
+    overflow: auto; /* 2 */
+}</code></pre>
+
+									<h5>Forms</h5>
+										<ul>
+											<li>For <code>form</code>, correct margin displayed oddly in IE 7.</li>
+										</ul>
+										<pre class="css"><code>form {
+    margin: 0;
+}</code></pre>
+										<ul>
+											<li>Remove inner spacing in IE 7 without affecting normal text inputs.</li>
+										</ul>
+										<pre class="css"><code>button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible; /* 4 */
+}</code></pre>
+										<ul>
+											<li>Remove excess padding in IE 7.</li>
+										</ul>
+										<pre class="css"><code>input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}</code></pre>
+										<ul>
+											<li>Correct alignment displayed oddly in IE 7 for <code>legend</code></li>
+										</ul>
+										<pre class="css"><code>legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+    *margin-left: -7px; /* 3 */
+}</code></pre>
+						</section>
+				</section>
+
+
+			</div>
+		</section>
+
+		<aside id="aside">
+			<section class="grid-1170">
+				<div>
+					<section class="column-6">
+			    		<h4>Normalize.scss</h4>
+			    			<p>Source code available on GitHub : <a href="https://github.com/Effeilo/normalize.scss/">Effeilo/normalize.scss</a>.</p>
+			    			<p>Normalize.scss is a project by <a href="http://www.effeiloweb.fr/">Effeilo</a>.</p>
+		    		</section>
+					<section class="column-6">
+			    		<h4>Uses Normalize.css</h4>
+							<p>Source code available on GitHub <a href="https://github.com/necolas/normalize.css/">necolas/normalize.css</a>.</p>
+			        		<p>Normalize.css is a project by <a href="http://nicolasgallagher.com/">Nicolas Gallagher</a>, co-created with <a href="http://music.thewikies.com/jonneal/">Jonathan Neal</a>.</p>
+		    		</section>
+	    		</div>
+    		</section>
+		</aside>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/3.ew.js"></script>
+
+    </body>
+
+</html>

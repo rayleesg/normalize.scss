@@ -1,0 +1,897 @@
+/*! ----------------------------------------------------------------------------
+
+	== Font Awesome scss 4.3.0 - @effeilo 
+	== Based on Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+	== License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+
+---------------------------------------------------------------------------- */
+
+// Variables
+$page-background-color:#fff;
+$page-text-color:#505050;
+$link-color:#c6538c;
+$link-state-color:#ccc;
+
+$color-primary:#c6538c;
+$color-secondary:#669999;
+
+/* ----------------------------------------------------------------------------
+
+	== BASE
+
+---------------------------------------------------------------------------- */
+
+html {
+  background: $page-background-color;
+  color: $page-text-color;
+  font-size: 62.5%;
+  font-size: calc(1em * 0.625);
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  outline:none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: $link-state-color;
+}
+
+/* -----------------------------------------------------------
+	Base : box model
+----------------------------------------------------------- */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* -----------------------------------------------------------
+	Base : reset
+----------------------------------------------------------- */
+html, body, header, h1, h2, h3, h4, h5, p, ul, li, pre, code {
+	margin:0;
+	padding:0;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+
+/* -----------------------------------------------------------
+	Base : typo
+----------------------------------------------------------- */
+@font-face{
+	font-family:"Roboto Slab";
+	src:url(fonts/robotoslab-light-webfont.eot);
+	src:url(fonts/robotoslab-light-webfont.eot?#iefix) format('embedded-opentype'),
+	url(fonts/robotoslab-light-webfont.woff) format('woff'),
+	url(fonts/robotoslab-light-webfont.ttf) format('truetype'),
+	url(fonts/robotoslab-light-webfont.svg?#RobotoSlab) format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+%roboto {
+	font-family:"Roboto Slab";
+}
+
+@font-face{
+	font-family: Lato;
+	src:url(fonts/lato-bla-webfont.eot);
+	src:url(fonts/lato-bla-webfont.eot?#iefix) format('embedded-opentype'),
+	url(fonts/lato-bla-webfont.woff) format('woff'),
+	url(fonts/lato-bla-webfont.ttf) format('truetype'),
+	url(fonts/lato-bla-webfont.svg?#Lato) format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+%lato {
+	font-family:Lato;
+}
+
+body {
+	@extend %roboto;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height:24px;
+}
+
+h1,h2,h3,h4,h5 {
+	@extend %lato;
+	font-weight:normal;
+}
+
+h3 {
+	color:$color-primary;
+	font-size:20px;
+	font-size:2rem;
+}
+
+h4 {
+	color:$color-secondary;
+	font-size:18px;
+	font-size:1.8rem;
+}
+
+h5 {
+	font-size:16px;
+	font-size:1.6rem;
+}
+
+pre {
+white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -pre-wrap;
+ white-space: -o-pre-wrap;
+ word-wrap: break-word; 
+}
+
+/*! ----------------------------------------------------------------------------
+
+	== Font Awesome scss 4.3.0 - @effeilo 
+	== Based on Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+	== License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+
+---------------------------------------------------------------------------- */
+/* -----------------------------------------------------------
+	Font Awesome : fontface
+----------------------------------------------------------- */
+@font-face {
+  font-family: "FontAwesome";
+  src: url("fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), 
+  url("fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), 
+  url("fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), 
+  url("fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), 
+  url("fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* -----------------------------------------------------------
+	Font Awesome : icons commons styles
+----------------------------------------------------------- */
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  font-style: normal;
+}
+
+/* -----------------------------------------------------------
+	Font Awesome : icons styles
+----------------------------------------------------------- */
+.fa-question:before {
+  content: "\f128";
+}
+.fa-graduation-cap:before {
+  content: "\f19d";
+}
+.fa-github:before {
+  content: "\f09b";
+}
+.fa-refresh:before {
+  content: "\f021";
+}
+.fa-floppy-o:before {
+  content: "\f0c7";
+}
+.fa-cog:before {
+  content: "\f013";
+}
+.fa-windows:before {
+  content: "\f17a";
+}
+.fa-bars:before {
+  content: "\f0c9";
+}
+.fa-chevron-right:before {
+  content: "\f054";
+}
+.fa-times:before {
+  content: "\f00d";
+}
+
+
+
+/* -----------------------------------------------------------
+	Layout : grid with gutters
+----------------------------------------------------------- */
+/* Grid container
+-------------------------------------------------------- */
+[class^="grid"] {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+}
+
+.grid-1170 {
+  max-width: 1170px;
+  padding: 0 30px;
+}
+
+/* Grid rows
+-------------------------------------------------------- */
+[class^="grid"] > * {
+  display: block;
+  padding: 0;
+  text-align: left;
+}
+
+.grid-1170 > * {
+  margin-left: -30px;
+}
+
+/* Grid columns
+-------------------------------------------------------- */
+
+[class^="grid"] > * > * {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 30px;
+  margin-left: 0;
+}
+
+.grid-1170 > * > * {
+  padding-left: 30px;
+}
+
+.grid-1170 .column-2 {
+  width: 16.66667%;
+}
+
+.grid-1170 .column-3 {
+  width: 25%;
+}
+
+.grid-1170 .column-4 {
+  width: 33.33333%;
+}
+
+.grid-1170 .column-6 {
+  width: 50%;
+}
+
+.grid-1170 .column-12 {
+  width: 100%;
+}
+
+/* White space fix
+-------------------------------------------------------- */
+:root [class^="grid"] > * {
+  font-size: 0;
+  text-justify: distribute-all-lines;
+}
+
+:root [class^="grid"] > * > * {
+  font-size: 1em;
+  font-size: 1.6rem;
+}
+
+.opera:-o-prefocus,
+[class^="grid"] > * {
+  word-spacing: -0.43em;
+}
+
+
+/* ----------------------------------------------------------------------------
+
+	== BUTTONS
+
+---------------------------------------------------------------------------- */
+
+.btn {
+	@extend %lato;
+	background-color: $color-primary;
+	border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	font-size: 24px;
+	font-size: 2.4rem;
+	padding: 12px 30px;
+	white-space: nowrap;
+	text-shadow:1px 1px 0 #000;
+	transition: background-color 0.2s ease 0s;
+	strong {
+		font-weight:normal;
+	}
+	span {
+		@extend %roboto;
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
+	&:hover {
+		background-color: darken($color-primary,10%);
+		color:#fff;
+	}
+}
+
+/* ----------------------------------------------------------------------------
+
+	== HEADER
+
+---------------------------------------------------------------------------- */
+
+#lang {
+	float:right;
+	display:block;
+	margin:10px 20px 0 0;
+	color:#fff;
+	font-size:12px;
+	font-size:1.2rem;
+	&:hover {
+		color:$color-primary;
+	}
+}
+
+#documentation {
+	#lang {
+		position:fixed;
+		z-index:3;
+		right:20px;
+		top:20px;
+		margin:0;
+	}
+}
+
+#header {
+	background:#181818 url('../images/header-bg.jpg') no-repeat center top;
+	color:#fff;
+	text-align:center;
+	padding:100px 30px;
+	h1 {
+		color:$color-primary;
+		font-size:50px;
+		font-size:5rem;
+		margin-bottom:80px;
+		text-shadow:1px 1px 0 #fff;
+	}
+	h2 {
+		font-size:34px;
+		font-size:3.4rem;
+		margin-bottom:70px;
+		line-height:38px;
+	}
+	p {
+		font-size:20px;
+		font-size:2rem;
+		line-height:28px;
+		&.chapo {
+			a {
+				text-shadow:1px 1px 0 #fff;
+			}
+		}
+	}
+}
+
+#documentation {
+	#header {
+		background:#181818 url('../images/header-bg.jpg') no-repeat center center;
+		color:#fff;
+		text-align:center;
+		padding:20px 30px;
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+		width:100%;
+		z-index:2;
+		h1 {
+			float:left;
+			font-size:30px;
+			font-size:3rem;
+			margin-bottom:0;
+			display:inline-block;
+		}
+		h2 {
+			float:left;
+			font-size:24px;
+			font-size:2.4rem;
+			margin-bottom:0;
+			display:inline-block;
+			line-height:28px;
+		}
+	}
+}
+
+.btn-download {
+	margin-top:70px;
+	margin-bottom:5px;
+}
+
+.credit {
+	a {
+		font-size:14px;
+		font-size:1.4rem;
+		color:#fff;	
+		&:hover {
+			color:$color-primary;
+		}
+	}
+}
+
+.tweet {
+	margin-top:30px;
+}
+
+@media screen and (max-width: 480px) {
+	#header {
+		h1 {
+			font-size:40px;
+			font-size:4rem;
+		}
+		h2 {
+			font-size:30px;
+			font-size:3rem;
+		}
+		p {
+			font-size:18px;
+			font-size:1.8rem;
+		}
+	}
+}
+
+@media screen and (max-width: 540px) {
+	#documentation {
+		#header {
+			h1 {
+				font-size:26px;
+				font-size:2.6rem!important;
+			}
+			h2 {
+				display:none;
+			}
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------------
+
+	== LINKS
+
+---------------------------------------------------------------------------- */
+
+.links {
+	padding:70px 0 100px 0;
+	text-align:center;
+	a {
+		color: #505050;
+		display:block;
+		&:hover {
+			i {
+				background-color: darken($color-secondary,10%);
+			}
+			color: #202020;
+		}
+
+	}
+	i {
+		background:$color-secondary;
+		width:70px;
+		line-height:70px;
+		height:70px;
+		border-radius:3px;
+		color:#fff;
+		font-size:3px;
+		font-size:3rem;
+		text-align:center;
+		margin-bottom:10px;
+		transition: background-color 0.2s ease 0s;
+		&.fa-github, &.fa-question { font-size:4px; font-size:4rem; }
+	}
+	span {
+		display:block;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.links {
+		.column-3 {
+			width:50%;
+			margin-bottom:50px;
+			& + .column-3 + .column-3 {
+				margin-bottom:0;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------------------
+
+	== ASIDE
+
+---------------------------------------------------------------------------- */
+
+#aside {
+	margin-bottom:100px;
+	h4, p {
+		text-align:center;	
+	}
+	h4 {
+		color:$color-primary;
+		font-size:18px;
+		font-size:1.8rem;
+		margin:0 0 5px 0;
+	}
+	p {
+		color:#707070;
+	}
+	a {
+		color:$color-secondary;
+		&:hover {
+			color:#202020;
+		}
+	}
+}
+
+#documentation {
+	#aside {
+		margin-top:70px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#aside {
+		.column-6 {
+			width:100%;
+			margin-bottom:50px;
+			& + .column-6 {
+				margin-bottom:0;
+			}
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------------
+
+	== DOCUMENTATION
+
+---------------------------------------------------------------------------- */
+
+#nav {
+	position:fixed;
+	width:340px;
+	height:100%;
+	top:65px;
+	left:0;
+	bottom:0;
+	padding:0 30px;
+	background:#eee;
+	h3 {
+		padding:35px 0 0 0;
+		color:$color-secondary;
+	}
+	ul {
+		margin-top:30px;
+		border-top:1px solid #ccc;
+		ul {
+			margin-top:0;
+			display:none;
+		}
+		li {
+			list-style:none;
+			border-bottom:1px solid #ccc;
+			a {
+				color:#505050;
+				display:block;
+				line-height:40px;
+				padding:0 0 0 10px;
+				&.active {
+					background:$color-secondary;
+					color:#fff;
+				}
+				&.opened {
+					background:$color-secondary;
+					color:#fff;
+				}
+				&.subnav-btn {
+					&:before {
+						@extend .fa;
+						content:"\f067";
+						display:block;
+						float:right;
+						height:30px;
+						line-height:30px;
+						text-align:center;
+						width:30px;
+						margin-top:5px;
+						margin-right:5px;
+						font-size:20px;
+						font-size:2rem!important;
+					}
+					&.opened {
+						&:before {
+							@extend .fa;
+							content:"\f068";
+						}
+					}
+				}
+			}
+			li {
+				border-bottom:0;
+				a {
+					line-height:30px;
+					color:#505050;
+					&:hover {
+						background:#ddd;
+					}
+					&.active {
+						color:$color-secondary;
+						background:#ddd;
+						&:before {
+							@extend .fa;
+							content:"\f054";
+							display:block;
+							float:right;
+							height:20px;
+							line-height:20px;
+							text-align:center;
+							width:20px;
+							background:#fff;
+							border-radius:50%;
+							margin-top:5px;
+							margin-right:5px;
+							font-size:12px;
+							font-size:1.2rem!important;
+						}
+					}
+				}
+			}
+		}
+	}
+	i {
+		color:$color-secondary;
+		display:block;
+		background-color:#fff;
+		float:left;
+		width:30px;
+		height:30px;
+		line-height:30px;
+		text-align:center;
+		margin-top:5px;
+		border-radius:50%;
+		margin-right:10px;
+	}
+}
+
+#btn-close-nav {
+	display:none;
+	i {
+		float:right;
+		width:50px;
+		height:50px;
+		line-height:50px;
+		margin-right:0;
+		margin-top:20px;
+		font-size:18px;
+		font-size:1.8rem;
+	}
+}
+
+#doc-content {
+	width:600px;
+	margin:0 auto 100px auto;
+	h3, h4 { padding-top:100px; }
+	h3 { margin-bottom:30px; }
+	a { color:$color-secondary; }
+	h4, h5, p, ul, pre { margin-bottom:20px; }
+	li { margin:0 0 0 20px; pre { margin-top:20px; }}
+}
+
+@media screen and (max-width: 1340px) {
+	#doc-content {
+		margin:0 0 100px 370px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	#nav {
+		position:fixed;
+		top:65px;
+		left:0;
+		right:0;
+		bottom:auto;
+		height:260px;
+		padding:0 30px;
+		width:100%;
+		padding-bottom:50px;
+		display:none;
+		box-shadow:1px 0 5px 0 #bbb;
+		&.tall {
+			height:540px;	
+		}
+	}
+	#nav.opened { display:block; }
+	#doc-content {
+		margin:0 auto;
+	}
+	#btn-close-nav { display:block; }
+	#documentation {
+		#lang {
+			right:80px;
+		}
+	}
+	#lang {
+		position:fixed;
+		z-index:3;
+		right:80px;
+		top:20px;
+		margin:0;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#doc-content {
+		width:100%;
+		padding:0 30px;
+	}
+}
+
+
+#btn-nav {
+	display:none;
+}
+
+@media screen and (max-width: 1024px) {
+	#btn-nav {
+		display:block;
+		float:right;
+		i {
+			font-size:26px;
+			font-size:2.6rem;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------------------
+
+	== Highlighting - github style (c) Vasily Polovnyov <vast@whiteants.net>
+
+---------------------------------------------------------------------------- */
+
+pre {
+  white-space: pre-line;
+  white-space: pre-wrap;
+}
+pre code {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.hljs {
+  display: block;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  border:1px solid #ddd;
+  border-radius:3px;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #dd1144;
+}
+
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold;
+}
+
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: teal;
+}
+
+.hljs-regexp {
+  color: #009926;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073;
+}
+
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #ffdddd;
+}
+
+.hljs-addition {
+  background: #ddffdd;
+}
+
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+.hljs-chunk {
+  color: #aaaaaa;
+}

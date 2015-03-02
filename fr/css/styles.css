@@ -1,0 +1,707 @@
+/*! ----------------------------------------------------------------------------
+
+	== Font Awesome scss 4.3.0 - @effeilo 
+	== Based on Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+	== License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+
+---------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------
+
+	== BASE
+
+---------------------------------------------------------------------------- */
+html {
+  background: #fff;
+  color: #505050;
+  font-size: 62.5%;
+  font-size: calc(1em * 0.625); }
+
+a {
+  color: #c6538c;
+  text-decoration: none;
+  outline: none; }
+
+a:hover,
+a:focus,
+a:active {
+  color: #ccc; }
+
+/* -----------------------------------------------------------
+	Base : box model
+----------------------------------------------------------- */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+/* -----------------------------------------------------------
+	Base : reset
+----------------------------------------------------------- */
+html, body, header, h1, h2, h3, h4, h5, p, ul, li, pre, code {
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block; }
+
+/* -----------------------------------------------------------
+	Base : typo
+----------------------------------------------------------- */
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(fonts/robotoslab-light-webfont.eot);
+  src: url(fonts/robotoslab-light-webfont.eot?#iefix) format("embedded-opentype"), url(fonts/robotoslab-light-webfont.woff) format("woff"), url(fonts/robotoslab-light-webfont.ttf) format("truetype"), url(fonts/robotoslab-light-webfont.svg?#RobotoSlab) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body, .btn span {
+  font-family: "Roboto Slab"; }
+
+@font-face {
+  font-family: Lato;
+  src: url(fonts/lato-bla-webfont.eot);
+  src: url(fonts/lato-bla-webfont.eot?#iefix) format("embedded-opentype"), url(fonts/lato-bla-webfont.woff) format("woff"), url(fonts/lato-bla-webfont.ttf) format("truetype"), url(fonts/lato-bla-webfont.svg?#Lato) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+h1, h2, h3, h4, h5, .btn {
+  font-family: Lato; }
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal; }
+
+h3 {
+  color: #c6538c;
+  font-size: 20px;
+  font-size: 2rem; }
+
+h4 {
+  color: #669999;
+  font-size: 18px;
+  font-size: 1.8rem; }
+
+h5 {
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word; }
+
+/*! ----------------------------------------------------------------------------
+
+	== Font Awesome scss 4.3.0 - @effeilo 
+	== Based on Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+	== License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+
+---------------------------------------------------------------------------- */
+/* -----------------------------------------------------------
+	Font Awesome : fontface
+----------------------------------------------------------- */
+@font-face {
+  font-family: "FontAwesome";
+  src: url("fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* -----------------------------------------------------------
+	Font Awesome : icons commons styles
+----------------------------------------------------------- */
+.fa, #nav ul li a.subnav-btn:before, #nav ul li a.subnav-btn.opened:before, #nav ul li li a.active:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  font-style: normal; }
+
+/* -----------------------------------------------------------
+	Font Awesome : icons styles
+----------------------------------------------------------- */
+.fa-question:before {
+  content: "\f128"; }
+
+.fa-graduation-cap:before {
+  content: "\f19d"; }
+
+.fa-github:before {
+  content: "\f09b"; }
+
+.fa-refresh:before {
+  content: "\f021"; }
+
+.fa-floppy-o:before {
+  content: "\f0c7"; }
+
+.fa-cog:before {
+  content: "\f013"; }
+
+.fa-windows:before {
+  content: "\f17a"; }
+
+.fa-bars:before {
+  content: "\f0c9"; }
+
+.fa-chevron-right:before {
+  content: "\f054"; }
+
+.fa-times:before {
+  content: "\f00d"; }
+
+/* -----------------------------------------------------------
+	Layout : grid with gutters
+----------------------------------------------------------- */
+/* Grid container
+-------------------------------------------------------- */
+[class^="grid"] {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden; }
+
+.grid-1170 {
+  max-width: 1170px;
+  padding: 0 30px; }
+
+/* Grid rows
+-------------------------------------------------------- */
+[class^="grid"] > * {
+  display: block;
+  padding: 0;
+  text-align: left; }
+
+.grid-1170 > * {
+  margin-left: -30px; }
+
+/* Grid columns
+-------------------------------------------------------- */
+[class^="grid"] > * > * {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 30px;
+  margin-left: 0; }
+
+.grid-1170 > * > * {
+  padding-left: 30px; }
+
+.grid-1170 .column-2 {
+  width: 16.66667%; }
+
+.grid-1170 .column-3 {
+  width: 25%; }
+
+.grid-1170 .column-4 {
+  width: 33.33333%; }
+
+.grid-1170 .column-6 {
+  width: 50%; }
+
+.grid-1170 .column-12 {
+  width: 100%; }
+
+/* White space fix
+-------------------------------------------------------- */
+:root [class^="grid"] > * {
+  font-size: 0;
+  text-justify: distribute-all-lines; }
+
+:root [class^="grid"] > * > * {
+  font-size: 1em;
+  font-size: 1.6rem; }
+
+.opera:-o-prefocus,
+[class^="grid"] > * {
+  word-spacing: -0.43em; }
+
+/* ----------------------------------------------------------------------------
+
+	== BUTTONS
+
+---------------------------------------------------------------------------- */
+.btn {
+  background-color: #c6538c;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 24px;
+  font-size: 2.4rem;
+  padding: 12px 30px;
+  white-space: nowrap;
+  text-shadow: 1px 1px 0 #000;
+  transition: background-color 0.2s ease 0s; }
+  .btn strong {
+    font-weight: normal; }
+  .btn span {
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .btn:hover {
+    background-color: #ad3972;
+    color: #fff; }
+
+/* ----------------------------------------------------------------------------
+
+	== HEADER
+
+---------------------------------------------------------------------------- */
+#lang {
+  float: right;
+  display: block;
+  margin: 10px 20px 0 0;
+  color: #fff;
+  font-size: 12px;
+  font-size: 1.2rem; }
+  #lang:hover {
+    color: #c6538c; }
+
+#documentation #lang {
+  position: fixed;
+  z-index: 3;
+  right: 20px;
+  top: 20px;
+  margin: 0; }
+
+#header {
+  background: #181818 url("../images/header-bg.jpg") no-repeat center top;
+  color: #fff;
+  text-align: center;
+  padding: 100px 30px; }
+  #header h1 {
+    color: #c6538c;
+    font-size: 50px;
+    font-size: 5rem;
+    margin-bottom: 80px;
+    text-shadow: 1px 1px 0 #fff; }
+  #header h2 {
+    font-size: 34px;
+    font-size: 3.4rem;
+    margin-bottom: 70px;
+    line-height: 38px; }
+  #header p {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 28px; }
+    #header p.chapo a {
+      text-shadow: 1px 1px 0 #fff; }
+
+#documentation #header {
+  background: #181818 url("../images/header-bg.jpg") no-repeat center center;
+  color: #fff;
+  text-align: center;
+  padding: 20px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2; }
+  #documentation #header h1 {
+    float: left;
+    font-size: 30px;
+    font-size: 3rem;
+    margin-bottom: 0;
+    display: inline-block; }
+  #documentation #header h2 {
+    float: left;
+    font-size: 24px;
+    font-size: 2.4rem;
+    margin-bottom: 0;
+    display: inline-block;
+    line-height: 28px; }
+
+.btn-download {
+  margin-top: 70px;
+  margin-bottom: 5px; }
+
+.credit a {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #fff; }
+  .credit a:hover {
+    color: #c6538c; }
+
+.tweet {
+  margin-top: 30px; }
+
+@media screen and (max-width: 480px) {
+  #header h1 {
+    font-size: 40px;
+    font-size: 4rem; }
+  #header h2 {
+    font-size: 30px;
+    font-size: 3rem; }
+  #header p {
+    font-size: 18px;
+    font-size: 1.8rem; } }
+@media screen and (max-width: 540px) {
+  #documentation #header h1 {
+    font-size: 26px;
+    font-size: 2.6rem !important; }
+  #documentation #header h2 {
+    display: none; } }
+/* ----------------------------------------------------------------------------
+
+	== LINKS
+
+---------------------------------------------------------------------------- */
+.links {
+  padding: 70px 0 100px 0;
+  text-align: center; }
+  .links a {
+    color: #505050;
+    display: block; }
+    .links a:hover {
+      color: #202020; }
+      .links a:hover i {
+        background-color: #527a7a; }
+  .links i {
+    background: #669999;
+    width: 70px;
+    line-height: 70px;
+    height: 70px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 3px;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: background-color 0.2s ease 0s; }
+    .links i.fa-github, .links i.fa-question {
+      font-size: 4px;
+      font-size: 4rem; }
+  .links span {
+    display: block; }
+
+@media screen and (max-width: 800px) {
+  .links .column-3 {
+    width: 50%;
+    margin-bottom: 50px; }
+    .links .column-3 + .column-3 + .column-3 {
+      margin-bottom: 0; } }
+/* ----------------------------------------------------------------------------
+
+	== ASIDE
+
+---------------------------------------------------------------------------- */
+#aside {
+  margin-bottom: 100px; }
+  #aside h4, #aside p {
+    text-align: center; }
+  #aside h4 {
+    color: #c6538c;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin: 0 0 5px 0; }
+  #aside p {
+    color: #707070; }
+  #aside a {
+    color: #669999; }
+    #aside a:hover {
+      color: #202020; }
+
+#documentation #aside {
+  margin-top: 70px; }
+
+@media screen and (max-width: 800px) {
+  #aside .column-6 {
+    width: 100%;
+    margin-bottom: 50px; }
+    #aside .column-6 + .column-6 {
+      margin-bottom: 0; } }
+/* ----------------------------------------------------------------------------
+
+	== DOCUMENTATION
+
+---------------------------------------------------------------------------- */
+#nav {
+  position: fixed;
+  width: 340px;
+  height: 100%;
+  top: 65px;
+  left: 0;
+  bottom: 0;
+  padding: 0 30px;
+  background: #eee; }
+  #nav h3 {
+    padding: 35px 0 0 0;
+    color: #669999; }
+  #nav ul {
+    margin-top: 30px;
+    border-top: 1px solid #ccc; }
+    #nav ul ul {
+      margin-top: 0;
+      display: none; }
+    #nav ul li {
+      list-style: none;
+      border-bottom: 1px solid #ccc; }
+      #nav ul li a {
+        color: #505050;
+        display: block;
+        line-height: 40px;
+        padding: 0 0 0 10px; }
+        #nav ul li a.active {
+          background: #669999;
+          color: #fff; }
+        #nav ul li a.opened {
+          background: #669999;
+          color: #fff; }
+        #nav ul li a.subnav-btn:before {
+          content: "\f067";
+          display: block;
+          float: right;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          width: 30px;
+          margin-top: 5px;
+          margin-right: 5px;
+          font-size: 20px;
+          font-size: 2rem !important; }
+        #nav ul li a.subnav-btn.opened:before {
+          content: "\f068"; }
+      #nav ul li li {
+        border-bottom: 0; }
+        #nav ul li li a {
+          line-height: 30px;
+          color: #505050; }
+          #nav ul li li a:hover {
+            background: #ddd; }
+          #nav ul li li a.active {
+            color: #669999;
+            background: #ddd; }
+            #nav ul li li a.active:before {
+              content: "\f054";
+              display: block;
+              float: right;
+              height: 20px;
+              line-height: 20px;
+              text-align: center;
+              width: 20px;
+              background: #fff;
+              border-radius: 50%;
+              margin-top: 5px;
+              margin-right: 5px;
+              font-size: 12px;
+              font-size: 1.2rem !important; }
+  #nav i {
+    color: #669999;
+    display: block;
+    background-color: #fff;
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 50%;
+    margin-right: 10px; }
+
+#btn-close-nav {
+  display: none; }
+  #btn-close-nav i {
+    float: right;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 0;
+    margin-top: 20px;
+    font-size: 18px;
+    font-size: 1.8rem; }
+
+#doc-content {
+  width: 600px;
+  margin: 0 auto 100px auto; }
+  #doc-content h3, #doc-content h4 {
+    padding-top: 100px; }
+  #doc-content h3 {
+    margin-bottom: 30px; }
+  #doc-content a {
+    color: #669999; }
+  #doc-content h4, #doc-content h5, #doc-content p, #doc-content ul, #doc-content pre {
+    margin-bottom: 20px; }
+  #doc-content li {
+    margin: 0 0 0 20px; }
+    #doc-content li pre {
+      margin-top: 20px; }
+
+@media screen and (max-width: 1340px) {
+  #doc-content {
+    margin: 0 0 100px 370px; } }
+@media screen and (max-width: 1024px) {
+  #nav {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: 260px;
+    padding: 0 30px;
+    width: 100%;
+    padding-bottom: 50px;
+    display: none;
+    box-shadow: 1px 0 5px 0 #bbb; }
+    #nav.tall {
+      height: 540px; }
+
+  #nav.opened {
+    display: block; }
+
+  #doc-content {
+    margin: 0 auto; }
+
+  #btn-close-nav {
+    display: block; }
+
+  #documentation #lang {
+    right: 80px; }
+
+  #lang {
+    position: fixed;
+    z-index: 3;
+    right: 80px;
+    top: 20px;
+    margin: 0; } }
+@media screen and (max-width: 700px) {
+  #doc-content {
+    width: 100%;
+    padding: 0 30px; } }
+#btn-nav {
+  display: none; }
+
+@media screen and (max-width: 1024px) {
+  #btn-nav {
+    display: block;
+    float: right; }
+    #btn-nav i {
+      font-size: 26px;
+      font-size: 2.6rem; } }
+/* ----------------------------------------------------------------------------
+
+	== Highlighting - github style (c) Vasily Polovnyov <vast@whiteants.net>
+
+---------------------------------------------------------------------------- */
+pre {
+  white-space: pre-line;
+  white-space: pre-wrap; }
+
+pre code {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 28px;
+  line-height: 2.8rem; }
+
+.hljs {
+  display: block;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 3px; }
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998;
+  font-style: italic; }
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold; }
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099; }
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #dd1144; }
+
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold; }
+
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal; }
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold; }
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal; }
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: teal; }
+
+.hljs-regexp {
+  color: #009926; }
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073; }
+
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3; }
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold; }
+
+.hljs-deletion {
+  background: #ffdddd; }
+
+.hljs-addition {
+  background: #ddffdd; }
+
+.diff .hljs-change {
+  background: #0086b3; }
+
+.hljs-chunk {
+  color: #aaaaaa; }
+
+/*# sourceMappingURL=styles.css.map */
