@@ -27,7 +27,6 @@
 		@if normalize-get("options", "legacy support for ie7") { 
 			display: block;
 		}
-		-moz-box-sizing: content-box;
 		box-sizing: content-box;
 		height: 0;
 	}

@@ -9,16 +9,13 @@
 	@if normalize-get("options", "explanatory comments") { 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
 	}
 
 	input[type="search"] {
 		-webkit-appearance: textfield; @if normalize-get("options", "explanatory comments") { /* 1 */ }
-		-moz-box-sizing: content-box;
-		-webkit-box-sizing: content-box; @if normalize-get("options", "explanatory comments") { /* 2 */ }
-		box-sizing: content-box;
+		box-sizing: content-box; @if normalize-get("options", "explanatory comments") { /* 2 */ }
 	}
 
 	@if normalize-get("options", "explanatory comments") {
