@@ -1,3 +1,9 @@
+#### normalize.scss v3.0.3 : January 22, 2016
+
+* Address inconsistent styling of b and strong.
+* Correct `hr` overflow in IE 8/9/10/11 and Edge 12.
+* Ensure `mark` long-hand background declaration usage.
+
 #### normalize.scss v3.0.3 : March 31, 2015
 
 * Remove unnecessary vendor prefixes.

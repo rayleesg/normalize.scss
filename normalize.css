@@ -102,11 +102,14 @@ abbr[title] {
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ * Address inconsistent styling of b and strong.
+ * 1. Correct duplicate application of `bolder` in Safari 6.0.2.
+ * 2. Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+.
  */
 b,
 strong {
-  font-weight: bold;
+  font-weight: inherit;
+  /* 1 */
 }
 
 /**
@@ -129,7 +132,7 @@ h1 {
  * Address styling not present in IE 8/9.
  */
 mark {
-  background: #ff0;
+  background-color: #ff0;
   color: #000;
 }
 
@@ -186,10 +189,16 @@ figure {
 
 /**
  * Address differences between Firefox and other browsers.
+ * 1. Correct `box-sizing` set to `border-box` in Firefox.
+ * 2. Correct `overflow` set to `hidden` in IE 8/9/10/11 and Edge 12.
  */
 hr {
   box-sizing: content-box;
+  /* 1 */
   height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
 }
 
 /**
