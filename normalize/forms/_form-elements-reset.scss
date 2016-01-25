@@ -10,8 +10,6 @@
 
 		@if normalize-get("options", "legacy support for ie7") {
 /**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in IE 7, Firefox 4+, Safari, and Chrome.
  */
@@ -19,8 +17,6 @@
 
 		@else {
 /**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
@@ -33,7 +29,6 @@
 	optgroup,
 	select,
 	textarea {
-		color: inherit; @if normalize-get("options", "explanatory comments") { /* 1 */ }
 		font: inherit; @if normalize-get("options", "explanatory comments") { /* 2 */ }
 		margin: 0; @if normalize-get("options", "explanatory comments") { /* 3 */ } 
 	}

@@ -8,14 +8,12 @@
 
 	@if normalize-get("options", "explanatory comments") { 
 /**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ * Address `appearance` set to `searchfield` in Safari and Chrome.
  */
 	}
 
 	input[type="search"] {
-		-webkit-appearance: textfield; @if normalize-get("options", "explanatory comments") { /* 1 */ }
-		box-sizing: content-box; @if normalize-get("options", "explanatory comments") { /* 2 */ }
+		-webkit-appearance: textfield;
 	}
 
 	@if normalize-get("options", "explanatory comments") {

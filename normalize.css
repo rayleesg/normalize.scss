@@ -95,10 +95,17 @@ a:hover {
 /* Text-level semantics
    ========================================================================== */
 /**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ * Address inconsistent styling of `abbr[title]`.
+ * 1. Correct styling in Firefox 39 and Opera 12.
+ * 2. Correct missing styling in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: 1px dotted;
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
 }
 
 /**
@@ -210,13 +217,17 @@ pre {
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
+ * 1. Correct inheritance and scaling of font-size for preformatted text.
+ * 2. Address odd `em`-unit font size rendering in all browsers.
  */
 code,
 kbd,
 pre,
 samp {
   font-family: monospace, monospace;
+  /* 1 */
   font-size: 1em;
+  /* 2 */
 }
 
 /* Forms
@@ -226,8 +237,6 @@ samp {
  * styling of `select`, unless a `border` property is set.
  */
 /**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
@@ -236,8 +245,6 @@ input,
 optgroup,
 select,
 textarea {
-  color: inherit;
-  /* 1 */
   font: inherit;
   /* 2 */
   margin: 0;
@@ -331,14 +338,10 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ * Address `appearance` set to `searchfield` in Safari and Chrome.
  */
 input[type="search"] {
   -webkit-appearance: textfield;
-  /* 1 */
-  box-sizing: content-box;
-  /* 2 */
 }
 
 /**

@@ -3,6 +3,9 @@
 * Address inconsistent styling of b and strong.
 * Correct `hr` overflow in IE 8/9/10/11 and Edge 12.
 * Ensure `mark` long-hand background declaration usage.
+* Remove color inheritance from form controls.
+* Address inconsistent styling of abbr[title].
+* Correct inheritance and scaling of font-size for preformatted text.
 
 #### normalize.scss v3.0.3 : March 31, 2015
 
